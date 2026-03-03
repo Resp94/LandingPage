@@ -1,6 +1,6 @@
 # Story 1.1: Project Initialization & Tooling Setup
 
-Status: review
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -245,25 +245,88 @@ public/
 
 ### Agent Model Used
 
-{{agent_model_name_version}}
+Dev agent (model não registrado na implementação original)
 
 ### Debug Log References
 
+- Build verificado com sucesso: `npm run build` exit code 0 (Astro 5.18.0)
+- Git commit de implementação: `2c641c8`
+
 ### Completion Notes List
 
-- Ultimate context engine analysis completed — comprehensive developer guide created
+- Projeto inicializado com `npm create astro@latest` (template minimal, TypeScript strict)
+- Integrações adicionadas: `@tailwindcss/vite` (v4.2.1), `@astrojs/cloudflare` (v12.6.12), `@astrojs/sitemap` (v3.7.0)
+- Estrutura de diretórios criada com `.gitkeep` em todos os diretórios vazios
+- `global.css` criado com `@import "tailwindcss"` (expandido posteriormente por Story 1.2)
+- Fontes `@fontsource/inter` e `@fontsource/jetbrains-mono` instaladas (sem import — conforme spec)
+- Prettier + prettier-plugin-tailwindcss configurados (devDependencies)
 
 ### File List
 
-- `tsconfig.json` (modified)
-- `astro.config.mjs` (modified)
-- `package.json` (modified)
-- `src/pages/index.astro` (modified)
-- `src/styles/global.css` (created)
-- `.env.example` (created)
-- `public/robots.txt` (created)
-- `src/components/` and subdirectories (created)
-- `src/layouts/` (created)
-- `src/scripts/` (created)
-- `src/assets/` and subdirectories (created)
-- `src/types/` (created)
+- `tsconfig.json` (modified — extends astro/tsconfigs/strict)
+- `astro.config.mjs` (modified — Tailwind vite plugin, Cloudflare adapter, Sitemap integration)
+- `package.json` (modified — dependencies e scripts)
+- `src/pages/index.astro` (modified — imports global.css)
+- `src/styles/global.css` (created — `@import "tailwindcss"`)
+- `.env.example` (created — TYPEFORM_FORM_ID, PUBLIC_GA_ID)
+- `public/robots.txt` (created — User-agent, Allow, Sitemap)
+- `src/components/sections/.gitkeep` (created)
+- `src/components/ui/.gitkeep` (created)
+- `src/components/layout/.gitkeep` (created)
+- `src/layouts/` (created — directory)
+- `src/scripts/.gitkeep` (created)
+- `src/assets/images/.gitkeep` (created)
+- `src/assets/icons/.gitkeep` (created)
+- `src/types/.gitkeep` (created)
+
+## Senior Developer Review (AI)
+
+**Reviewer:** Code Review Workflow (Antigravity)
+**Date:** 2026-03-03
+**Outcome:** ✅ APPROVED
+
+### Review Summary
+
+| Categoria | Resultado |
+|---|---|
+| ACs Implementados | 7/7 ✅ |
+| Tasks Concluídas | 7/7 (todas [x] verificadas) |
+| Build | ✅ `npm run build` sem erros |
+| Violações de Arquitetura | 0 |
+| Issues Críticos | 0 |
+| Issues Médios | 1 (informativo) |
+| Issues Baixos | 2 (cosméticos) |
+
+### Acceptance Criteria Validation
+
+| AC | Status | Evidência |
+|---|---|---|
+| #1 Dev server runs | ✅ IMPLEMENTED | `npm run dev` funcional, Astro 5.18.0 |
+| #2 TS strict mode | ✅ IMPLEMENTED | `tsconfig.json` extends `astro/tsconfigs/strict` (que inclui `"strict": true`) |
+| #3 Integrations config | ✅ IMPLEMENTED | `astro.config.mjs`: `@tailwindcss/vite`, `@astrojs/cloudflare`, `@astrojs/sitemap` |
+| #4 Directory structure | ✅ IMPLEMENTED | Todos os 10 diretórios criados com `.gitkeep` |
+| #5 .env.example | ✅ IMPLEMENTED | Contém `TYPEFORM_FORM_ID=` e `PUBLIC_GA_ID=` |
+| #6 robots.txt | ✅ IMPLEMENTED | `User-agent: *`, `Allow: /`, `Sitemap: https://aptus.com/sitemap-index.xml` |
+| #7 Build success | ✅ IMPLEMENTED | `npm run build` completa com exit code 0 |
+
+### Findings
+
+**Falsos Positivos Investigados e Descartados:**
+
+1. ~~`global.css` contém 118 linhas com design tokens~~ — Verificação git (`git show 2c641c8:src/styles/global.css`) confirma que no commit da Story 1.1 o arquivo continha apenas `@import "tailwindcss"`. O conteúdo atual é da Story 1.2.
+2. ~~Fonts importadas contra instrução Task 6.2~~ — Mesma verificação: fonts NÃO estavam importadas no commit da Story 1.1. Adicionadas pela Story 1.2.
+3. ~~`favicon.ico` referenciado mas inexistente~~ — Verificação de filesystem: `public/favicon.ico` existe.
+
+**Issues Encontrados:**
+
+- 🟡 **M-1 [Informativo]**: `tsconfig.json` usa `extends` para herdar strict mode ao invés de declarar inline. Comportamento correto (Astro best practice), mas menos óbvio na inspeção direta.
+- 🟢 **L-1 [Cosmético]**: `index.astro` mantém `<title>Astro</title>` e `lang="en"` do starter. Endereçado pela Story 1.3 (`BaseLayout.astro` usa `lang="pt-BR"` e título dinâmico).
+- 🟢 **L-2 [Cosmético]**: Prettier + prettier-plugin-tailwindcss adicionados sem documentação na story. Tooling útil e alinhado com arquitetura.
+
+### Fixes Applied
+
+1. Dev Agent Record atualizado com informações reais (placeholder `{{agent_model_name_version}}` resolvido)
+2. File List detalhada com caminhos específicos de cada arquivo/diretório
+3. Completion Notes expandidas com detalhes das ações executadas
+4. Debug Log References adicionadas (build verification, git commit)
+5. Status atualizado para `done`
