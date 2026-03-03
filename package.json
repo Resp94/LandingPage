@@ -7,9 +7,12 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write \"src/**/*.{astro,css,ts,html}\"",
-    "format:check": "prettier --check \"src/**/*.{astro,css,ts,html}\"",
-    "lighthouse": "lhci autorun"
+    "format": "prettier --write \"src/**/*.{css,ts,html}\"",
+    "format:check": "prettier --check \"src/**/*.{css,ts,html}\"",
+    "lighthouse": "lhci autorun",
+    "lint": "astro check && npm run format:check",
+    "test:story-2-4": "node tests/story-2-4-smoke.test.mjs",
+    "test": "npm run test:story-2-4"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

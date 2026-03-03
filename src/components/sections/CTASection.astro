@@ -1,0 +1,29 @@
+---
+// src/components/sections/CTASection.astro
+import TacticalCTA from '../ui/TacticalCTA.astro';
+
+// Componente CTASection (Zero-JS Default, Server Rendering Only)
+// Observação de scroll e scroll-reveal tratados de forma global pela aplicação
+---
+
+<section 
+  class="py-24 lg:py-32 scroll-reveal text-center" 
+  aria-labelledby="cta-title"
+>
+  <div class="px-4 mx-auto w-full max-w-4xl">
+    <h2 
+      id="cta-title" 
+      class="text-4xl font-bold tracking-tight text-zinc-100 md:text-5xl"
+    >
+      Sua Operação Merece Engenharia, Não Remendos
+    </h2>
+    
+    <div class="mt-10 flex justify-center w-full">
+      <TacticalCTA class="border-emerald-500/70 bg-emerald-500/10 text-emerald-300 shadow-lg shadow-emerald-500/10 hover:border-emerald-400 hover:bg-emerald-500/20 hover:text-emerald-200" />
+    </div>
+
+    <p class="mt-6 text-zinc-400">
+      Análise sem compromisso. Sua operação diagnosticada em até 24h úteis.
+    </p>
+  </div>
+</section>

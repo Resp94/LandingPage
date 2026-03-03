@@ -1,0 +1,98 @@
+---
+// src/pages/privacidade.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Política de Privacidade | Aptus"
+  description="Política de Privacidade da Aptus. Saiba como cuidamos dos seus dados em conformidade com a LGPD."
+>
+  <div class="px-4 py-24 mx-auto w-full max-w-4xl lg:py-32 text-zinc-400 scroll-reveal">
+    <h1 class="mb-12 text-4xl font-bold tracking-tight text-zinc-100 md:text-5xl">
+      Política de Privacidade
+    </h1>
+
+    <div class="space-y-12 max-w-none prose-emerald">
+      <section>
+        <h2 class="mb-4 text-2xl font-semibold tracking-tight text-zinc-100">1. Introdução</h2>
+        <p class="leading-relaxed">
+          A Aptus compromete-se a proteger a sua privacidade e a garantir a segurança dos seus dados pessoais. 
+          Esta Política de Privacidade explica como coletamos, usamos, compartilhamos e protegemos as suas 
+          informações quando você utiliza os nossos serviços e acessa o nosso site, em total conformidade com a 
+          Lei Geral de Proteção de Dados (LGPD).
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-4 text-2xl font-semibold tracking-tight text-zinc-100">2. Dados Coletados</h2>
+        <p class="mb-4 leading-relaxed">
+          Para fornecermos os nossos serviços, poderemos coletar e processar os seguintes tipos de dados pessoais:
+        </p>
+        <ul class="pl-6 space-y-2 list-disc marker:text-emerald-500">
+          <li><strong>Dados de Identificação:</strong> Nome completo.</li>
+          <li><strong>Dados de Contato:</strong> Endereço de e-mail e telefone corporativo.</li>
+          <li><strong>Dados Profissionais:</strong> Empresa em que trabalha e cargo ocupado.</li>
+          <li><strong>Informações de Navegação:</strong> Endereço IP, localização, tipo de navegador e tempo de sessão.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="mb-4 text-2xl font-semibold tracking-tight text-zinc-100">3. Propósito do Tratamento de Dados</h2>
+        <p class="mb-4 leading-relaxed">
+          A coleta destas informações serve propósitos estritamente alinhados com nossos serviços B2B:
+        </p>
+        <ul class="pl-6 space-y-2 list-disc marker:text-emerald-500">
+          <li>Qualificação de leads e avaliação de fit comercial inicial.</li>
+          <li>Agendamentos para diagnóstico operacional e auditorias de processos.</li>
+          <li>Comunicação institucional e envio de materiais relevantes ao seu negócio.</li>
+          <li>Melhoria da experiência do usuário na nossa plataforma.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="mb-4 text-2xl font-semibold tracking-tight text-zinc-100">4. Processamento e Compartilhamento</h2>
+        <p class="leading-relaxed">
+          Os seus dados podem ser processados por ferramentas terceiras seguras através de webhooks e automações 
+          para ingressarem no nosso CRM (Client Relationship Management). Não vendemos nem comercializamos 
+          os seus dados pessoais sob nenhuma hipótese. O compartilhamento ocorre estritamente com nossos 
+          parceiros de tecnologia essenciais para a operação, que também estão comprometidos com a LGPD.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="mb-4 text-2xl font-semibold tracking-tight text-zinc-100">5. Seus Direitos (LGPD)</h2>
+        <p class="mb-4 leading-relaxed">
+          Como titular dos dados, você possui os seguintes direitos garantidos pela legislação brasileira:
+        </p>
+        <ul class="pl-6 space-y-2 list-disc marker:text-emerald-500">
+          <li><strong>Acesso:</strong> Solicitar e acessar os dados que temos sobre você.</li>
+          <li><strong>Retificação:</strong> Corrigir dados incompletos, inexatos ou desatualizados.</li>
+          <li><strong>Exclusão:</strong> Requerer a eliminação dos dados desnecessários ou excessivos.</li>
+          <li><strong>Revogação do Consentimento:</strong> Retirar, a qualquer momento, o consentimento previamente fornecido.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="mb-4 text-2xl font-semibold tracking-tight text-zinc-100">6. Contato do Controlador de Dados</h2>
+        <p class="leading-relaxed">
+          A Aptus é a controladora responsável pelos seus dados pessoais. Caso deseje exercer os seus 
+          direitos ou tenha qualquer dúvida sobre esta política, por favor, entre em contato através 
+          do e-mail: 
+          <a  
+            href="mailto:privacidade@aptus.com" 
+            class="font-medium font-semibold text-emerald-400 hover:text-emerald-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 transition-colors rounded-sm"
+          >privacidade@aptus.com</a>.
+        </p>
+      </section>
+      
+      <section>
+        <h2 class="mb-4 text-2xl font-semibold tracking-tight text-zinc-100">7. Atualizações</h2>
+        <p class="leading-relaxed">
+          Reservamo-nos o direito de atualizar esta Política de Privacidade a qualquer momento para melhoria 
+          contínua e adequação legal. A versão mais recente estará sempre disponível nesta página.
+        </p>
+        <p class="mt-4 text-sm text-zinc-500">Última atualização: Março de 2026</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
