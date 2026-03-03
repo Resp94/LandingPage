@@ -1,6 +1,6 @@
 # Story 1.2: Design System & Global Styles
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -25,12 +25,12 @@ para que **eu perceba imediatamente a Aptus como uma consultoria de engenharia d
 
 ## Tarefas / Subtarefas
 
-- [ ] Configuração do Tailwind v4
-  - [ ] Estabelecer os estilos globais de `body` e `@theme` no `src/styles/global.css` de acordo com a arquitetura definida (Tailwind v4 CSS-first config).
-  - [ ] Definir `bg-zinc-950` e aplicar as cores de texto primárias.
-- [ ] Instalação e Configuração de Tipografia
-  - [ ] Instalar as dependências `@fontsource/inter` e `@fontsource/jetbrains-mono`.
-  - [ ] Importar as fontes (pesos específicos) no `global.css` com a estratégia `font-display: swap` definida via variáveis.
+- [x] Configuração do Tailwind v4
+  - [x] Estabelecer os estilos globais de `body` e `@theme` no `src/styles/global.css` de acordo com a arquitetura definida (Tailwind v4 CSS-first config).
+  - [x] Definir `bg-zinc-950` e aplicar as cores de texto primárias.
+- [x] Instalação e Configuração de Tipografia
+  - [x] Instalar as dependências `@fontsource/inter` e `@fontsource/jetbrains-mono`.
+  - [x] Importar as fontes (pesos específicos) no `global.css` com a estratégia `font-display: swap` definida via variáveis.
 
 ## Notas para o Desenvolvedor (Dev Notes)
 
@@ -68,8 +68,13 @@ Nenhum
 
 ### Notas Finais de Conclusão
 
-Nenhum
+- Estilos globais configurados no arquivo `global.css` com foco na estratégia CSS-first do Tailwind v4.
+- As definições da hierarquia de cores e tipografias (Inter e JetBrains Mono) estão de acordo com o design especificado.
+- Atendidos todos os requisitos de tokens estruturais, como espacamento e cor de accento Emerald.
+- Testado gerando build com sucesso (`npm run build`).
 
 ### Lista de Arquivos
 
-Nenhum
+- `src/styles/global.css`
+- `package.json`
+- `package-lock.json`
