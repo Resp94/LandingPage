@@ -1,6 +1,6 @@
 # Story 2.1: Hero Section — The "Choque Empático"
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -25,20 +25,20 @@ Para que **nos primeiros 3 segundos eu me sinta profundamente compreendido e per
 
 ## Tarefas / Subtarefas
 
-- [ ] Criar arquivo `HeroSection.astro` na pasta `src/components/sections/` (CA: 2)
-  - [ ] Estruturar marcação HTML semântica (`<section>`, `<header>`, `<h1>`, `<p>`)
-- [ ] Aplicar classes de tipografia baseadas na `Inter` (Font weight, Color, Tracking, Sizes) (CA: 3, 4)
-  - [ ] Título (h1) com classes Tailwind: `text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-100`
-  - [ ] Sub-título (p) com `text-zinc-400 max-w-2xl`
-- [ ] Criar espaçamentos e grids (CA: 6, 8)
-  - [ ] Aplicar ao container principal: `w-full py-24 lg:py-32`
-  - [ ] Aplicar no interior: `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` para segurar centralização segura
-  - [ ] Garantir que o texto mude de left-align no mobile para center no Desktop (se essa for a orientação adotada da Hero). *Nota: O UX cita restrições severas sobre text-alignment, revisar a preferência do mobile esquerda / Desktop central se achar adequado*.
-- [ ] Adicionar botão de "Agendar Auditoria" (TacticalCTA Placeholder) (CA: 5)
-  - [ ] Use as classes provisórias para simular o Tactical CTA (uma vez que ele passará por detalhamento total na Story 3.1): `inline-flex items-center justify-center uppercase tracking-wider border border-zinc-700 text-zinc-300 bg-transparent hover:border-emerald-500/50 hover:bg-emerald-500/10 hover:text-emerald-400 transition-all duration-200 ease-out px-8 py-4 mt-8 rounded-none` (ou com pouca borda).
-- [ ] Otimização para LCP e Animações (CA: 7, 9, 10)
-  - [ ] Adicionar classe `.scroll-reveal` no wrapper que envolve os textos e CTA, para entrada animada pelo script global base.
-  - [ ] Certificar que esse arquivo não traga componentes pesados `<script>` ou pacotes externos.
+- [x] Criar arquivo `HeroSection.astro` na pasta `src/components/sections/` (CA: 2)
+  - [x] Estruturar marcação HTML semântica (`<section>`, `<header>`, `<h1>`, `<p>`)
+- [x] Aplicar classes de tipografia baseadas na `Inter` (Font weight, Color, Tracking, Sizes) (CA: 3, 4)
+  - [x] Título (h1) com classes Tailwind: `text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-100`
+  - [x] Sub-título (p) com `text-zinc-400 max-w-2xl`
+- [x] Criar espaçamentos e grids (CA: 6, 8)
+  - [x] Aplicar ao container principal: `w-full py-24 lg:py-32`
+  - [x] Aplicar no interior: `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` para segurar centralização segura
+  - [x] Garantir que o texto mude de left-align no mobile para center no Desktop (se essa for a orientação adotada da Hero). *Nota: O UX cita restrições severas sobre text-alignment, revisar a preferência do mobile esquerda / Desktop central se achar adequado*.
+- [x] Adicionar botão de "Agendar Auditoria" (TacticalCTA Placeholder) (CA: 5)
+  - [x] Use as classes provisórias para simular o Tactical CTA (uma vez que ele passará por detalhamento total na Story 3.1): `inline-flex items-center justify-center uppercase tracking-wider border border-zinc-700 text-zinc-300 bg-transparent hover:border-emerald-500/50 hover:bg-emerald-500/10 hover:text-emerald-400 transition-all duration-200 ease-out px-8 py-4 mt-8 rounded-none` (ou com pouca borda).
+- [x] Otimização para LCP e Animações (CA: 7, 9, 10)
+  - [x] Adicionar classe `.scroll-reveal` no wrapper que envolve os textos e CTA, para entrada animada pelo script global base.
+  - [x] Certificar que esse arquivo não traga componentes pesados `<script>` ou pacotes externos.
 
 ## Dev Notes
 
@@ -73,3 +73,12 @@ Gemini 2.5 Pro (BMAD-Agent)
 - Ultimate context engine analysis completed. 
 - Story generated in pt-BR as per user global memory rule.
 - Sprint status updated to 'ready-for-dev' and Epic 2 to 'in-progress'.
+- Arquivo `HeroSection.astro` implementado obedecendo rigorosamente à regra de Zero-JS e estrutura HTML semântica (SSG).
+- Tailwind v4 classes aplicadas para tipografia impecável usando Inter.
+- Responsividade garantida (textos variam tamanho e alinhamento: left mobile / center desktop).
+
+## File List
+- `src/components/sections/HeroSection.astro` (Criado)
+
+## Change Log
+- 2026-03-03: Implementada a `HeroSection.astro` com markup estático otimizado par LCP, focando no Dark Mode e paleta Zinc.
