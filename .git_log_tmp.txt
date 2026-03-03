@@ -1,0 +1,5 @@
+a80a400 feat: Monta a página inicial com a nova seção CTA, atualiza a configuração do Lighthouse CI e adiciona imagem OG.
+c71f163 feat: Implementa seção de CTA final e página de política de privacidade, com integração na página inicial e testes de fumaça.
+50a234c feat: Implementa a seção de solução "Método Aptus" com layout responsivo e animações de revelação.
+81fc6a2 feat: Adiciona a seção de problemas 'O Voo Cego' à landing page, integrando o novo componente `DataMatrixBadge` e atualizando o status da história.
+5d48e04 feat: implementa a seção Hero da landing page e a integra na página inicial, otimizada para LCP.

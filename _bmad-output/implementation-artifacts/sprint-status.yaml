@@ -59,10 +59,11 @@ development_status:
   epic-2-retrospective: optional
 
   # === Epic 3: Lead Qualification Engine & Conversion ===
-  epic-3: backlog
-  3-1-tacticalcta-component: backlog
+  epic-3: in-progress
+  3-1-tacticalcta-component: done
   3-2-diagnosticmodal-overlay-focus-lock: backlog
   3-3-typeform-tally-embed-form-integration: backlog
   3-4-success-state-post-submission-experience: backlog
   3-5-webhook-integration-crm-pipeline: backlog
   epic-3-retrospective: optional
+

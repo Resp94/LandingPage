@@ -1,4 +1,5 @@
 ---
+import TacticalCTA from '../ui/TacticalCTA.astro';
 // HeroSection.astro - Renderizado estaticamente (Zero-JS default)
 // Otimizado para LCP rápido (above-the-fold) e sem dependências do cliente.
 ---
@@ -17,12 +18,13 @@
       </p>
     </header>
 
-    <div class="mt-8">
+    <div class="mt-8 w-full md:w-auto">
+      <TacticalCTA class="w-full sm:w-auto" />
       <a
         href="#auditoria"
-        class="inline-flex items-center justify-center px-8 py-4 uppercase tracking-wider border border-zinc-700 text-zinc-300 bg-transparent transition-all duration-200 ease-out hover:bg-emerald-500/10 hover:text-emerald-400 hover:border-emerald-500/50 rounded-none w-full sm:w-auto text-sm font-semibold"
+        class="sr-only focus:not-sr-only focus:mt-3 focus:inline-flex focus:text-sm focus:text-emerald-400"
       >
-        Agendar Auditoria
+        Ir para a seção de auditoria
       </a>
     </div>
   </div>
