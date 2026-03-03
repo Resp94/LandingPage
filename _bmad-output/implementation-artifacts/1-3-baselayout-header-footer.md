@@ -1,6 +1,6 @@
 # Story 1.3: BaseLayout, Header & Footer
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -27,21 +27,21 @@ para que **a página carregue rapidamente, pareça premium nos resultados de bus
 
 ## Tarefas / Subtarefas
 
-- [ ] Criar o componente `BaseLayout.astro` (AC: 1, 2, 3, 4)
-  - [ ] Implementar as meta tags de SEO, OG tags, JSON-LD Schema (Organization).
-  - [ ] Adicionar o preload das fontes do Inter local (`@fontsource/inter`).
-  - [ ] Importar `src/styles/global.css`.
-  - [ ] Adicionar um `<slot />` na tag `<body>` com as classes `bg-zinc-950 text-zinc-100 flex flex-col min-h-screen`.
-- [ ] Criar o componente `Header.astro` (AC: 5, 6, 7, 8, 9)
-  - [ ] Desenvolver a barra superior com `fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur`.
-  - [ ] Inserir o logo em SVG (Aptus monocromático) à esquerda (ou centrado no mobile).
-  - [ ] Construir o botão `TacticalCTA` (como componente placeholder `src/components/ui/TacticalCTA.astro` temporário). O botão deve exibir ("Agendar Auditoria").
-  - [ ] Garantir o comportamento reponsivo (logo + cta row no desktop, flex-col/w-full no mobile se necessário). Não colocar links de navegação.
-- [ ] Criar o componente `Footer.astro` (AC: 10, 11, 12)
-  - [ ] Implementar a barra de rodapé usando bloco com `mt-auto border-t border-zinc-800/50 py-12`.
-  - [ ] Adicionar link para a rota estática `/privacidade`.
-  - [ ] Adicionar bloco de contatos e redes sociais usando os estilos `text-zinc-500 hover:text-zinc-100 transition-colors`.
-  - [ ] Assegurar foco de acessibilidade `focus-visible:ring-2 focus-visible:ring-emerald-500`.
+- [x] Criar o componente `BaseLayout.astro` (AC: 1, 2, 3, 4)
+  - [x] Implementar as meta tags de SEO, OG tags, JSON-LD Schema (Organization).
+  - [x] Adicionar o preload das fontes do Inter local (`@fontsource/inter`).
+  - [x] Importar `src/styles/global.css`.
+  - [x] Adicionar um `<slot />` na tag `<body>` com as classes `bg-zinc-950 text-zinc-100 flex flex-col min-h-screen`.
+- [x] Criar o componente `Header.astro` (AC: 5, 6, 7, 8, 9)
+  - [x] Desenvolver a barra superior com `fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur`.
+  - [x] Inserir o logo em SVG (Aptus monocromático) à esquerda (ou centrado no mobile).
+  - [x] Construir o botão `TacticalCTA` (como componente placeholder `src/components/ui/TacticalCTA.astro` temporário). O botão deve exibir ("Agendar Auditoria").
+  - [x] Garantir o comportamento reponsivo (logo + cta row no desktop, flex-col/w-full no mobile se necessário). Não colocar links de navegação.
+- [x] Criar o componente `Footer.astro` (AC: 10, 11, 12)
+  - [x] Implementar a barra de rodapé usando bloco com `mt-auto border-t border-zinc-800/50 py-12`.
+  - [x] Adicionar link para a rota estática `/privacidade`.
+  - [x] Adicionar bloco de contatos e redes sociais usando os estilos `text-zinc-500 hover:text-zinc-100 transition-colors`.
+  - [x] Assegurar foco de acessibilidade `focus-visible:ring-2 focus-visible:ring-emerald-500`.
 
 ## Dev Notes
 
@@ -75,9 +75,19 @@ Antigravity
 
 ### Debug Log References
 
-Nenhum
+- Astro check aprovado
 
 ### Completion Notes List
 
+- BaseLayout implementado com SEO, Schema Org, preload do Inter e slot injetado em um wrapper min-h-screen.
+- Header monocromático e minimalista, sticky/fixed, com blur no desktop e mobile.
+- Footer implementado de forma harmoniosa e focado em acessibilidade.
+- Suporte a focus-visible com anéis emerald garantido.
+
 ### File List
+
+- src/components/ui/TacticalCTA.astro (Novo)
+- src/components/layout/Header.astro (Novo)
+- src/components/layout/Footer.astro (Novo)
+- src/layouts/BaseLayout.astro (Novo)
 
