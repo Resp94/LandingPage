@@ -1,0 +1,78 @@
+---
+import DataMatrixBadge from '../ui/DataMatrixBadge.astro';
+---
+
+<section class="w-full py-24 lg:py-32 bg-zinc-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="scroll-reveal mb-16 lg:mb-24">
+      <header class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <h2 class="text-zinc-100 font-bold tracking-tight text-4xl lg:text-5xl max-w-2xl">
+          Operar sem métricas claras é um <span class="text-zinc-100">voo cego.</span>
+        </h2>
+        <p class="max-w-3xl text-zinc-400 text-lg leading-relaxed line-clamp-3">
+          Processos manuais, escala linear por contratação e operações baseadas em memória. Sem sistemas eficientes, o caos operacional trava o seu crescimento e consome seus recursos.
+        </p>
+      </header>
+    </div>
+
+    <!-- Grid de Dores -->
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-grid">
+      <!-- Problema 1: Processos Manuais -->
+      <li class="scroll-reveal p-8 lg:p-10 border-b border-r border-grid flex flex-col gap-8">
+        <div class="flex items-start justify-between">
+          <div class="w-10 h-10 rounded-none bg-surface-secondary flex items-center justify-center border border-grid">
+            <svg aria-hidden="true" focusable="false" class="w-5 h-5 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <DataMatrixBadge value="ERR_MANUAL" />
+        </div>
+        <div>
+          <h3 class="text-zinc-100 font-semibold text-xl mb-3">Processos Manuais</h3>
+          <p class="text-zinc-400 leading-relaxed max-w-sm mb-6">
+            Tarefas repetitivas consumindo o tempo estratégico da sua equipe técnica e comercial.
+          </p>
+          <DataMatrixBadge label="Tempo Perdido" value="40%" />
+        </div>
+      </li>
+
+      <!-- Problema 2: Escala Linear -->
+      <li class="scroll-reveal p-8 lg:p-10 border-b border-r border-grid flex flex-col gap-8 delay-100">
+        <div class="flex items-start justify-between">
+          <div class="w-10 h-10 rounded-none bg-surface-secondary flex items-center justify-center border border-grid">
+            <svg aria-hidden="true" focusable="false" class="w-5 h-5 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <DataMatrixBadge value="SCL_LINEAR" />
+        </div>
+        <div>
+          <h3 class="text-zinc-100 font-semibold text-xl mb-3">Escala Linear</h3>
+          <p class="text-zinc-400 leading-relaxed max-w-sm mb-6">
+            O único jeito de atender mais clientes hoje é inflando a folha de pagamento com pessoal operacional.
+          </p>
+          <DataMatrixBadge label="Gargalo" value="Contratação" />
+        </div>
+      </li>
+
+      <!-- Problema 3: Dependência de Memória -->
+      <li class="scroll-reveal p-8 lg:p-10 border-b border-r border-grid flex flex-col gap-8 md:col-span-2 lg:col-span-1 delay-200">
+        <div class="flex items-start justify-between">
+          <div class="w-10 h-10 rounded-none bg-surface-secondary flex items-center justify-center border border-grid">
+            <svg aria-hidden="true" focusable="false" class="w-5 h-5 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <DataMatrixBadge value="MEM_DEP" />
+        </div>
+        <div>
+          <h3 class="text-zinc-100 font-semibold text-xl mb-3">Operação por Memória</h3>
+          <p class="text-zinc-400 leading-relaxed max-w-sm mb-6">
+            Procedimentos essenciais existem apenas na cabeça dos seus colaboradores mais experientes.
+          </p>
+          <DataMatrixBadge label="Risco Operacional" value="Crítico" />
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
