@@ -1,6 +1,6 @@
 # Story 1.2: Design System & Global Styles
 
-Status: review
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -31,6 +31,12 @@ para que **eu perceba imediatamente a Aptus como uma consultoria de engenharia d
 - [x] Instalação e Configuração de Tipografia
   - [x] Instalar as dependências `@fontsource/inter` e `@fontsource/jetbrains-mono`.
   - [x] Importar as fontes (pesos específicos) no `global.css` com a estratégia `font-display: swap` definida via variáveis.
+- [x] Review Follow-ups (AI — Code Review 2026-03-02)
+  - [x] [AI-Review][HIGH] Adicionar tokens semânticos de superfícies secundárias (`--color-surface-primary/secondary/tertiary`) e utilities `.bg-surface-*` [global.css:@theme]
+  - [x] [AI-Review][HIGH] Instalar `prettier-plugin-tailwindcss` para enforcement automático da ordenação de classes Tailwind [package.json, .prettierrc]
+  - [x] [AI-Review][MEDIUM] Corrigir imports de fontsource para usar subsets `latin` + `latin-ext` apenas, eliminando cyrillic/greek/vietnamese do bundle [global.css:imports]
+  - [x] [AI-Review][MEDIUM] Adicionar comentário clarificando que `var()` em `@theme` é correto no Tailwind v4 CSS-first (não viola anti-pattern) [global.css]
+  - [x] [AI-Review][MEDIUM] Documentar `font-display: swap` como API oficial `@fontsource` v5 [global.css:root]
 
 ## Notas para o Desenvolvedor (Dev Notes)
 
@@ -70,11 +76,11 @@ Nenhum
 
 - Estilos globais configurados no arquivo `global.css` com foco na estratégia CSS-first do Tailwind v4.
 - As definições da hierarquia de cores e tipografias (Inter e JetBrains Mono) estão de acordo com o design especificado.
-- Atendidos todos os requisitos de tokens estruturais, como espacamento e cor de accento Emerald.
+- Atendidos todos os requisitos de tokens estruturais, como espaçamento e cor de acento Emerald.
 - Testado gerando build com sucesso (`npm run build`).
 
 ### Lista de Arquivos
 
 - `src/styles/global.css`
 - `package.json`
-- `package-lock.json`
+- `.prettierrc`

@@ -1,14 +1,32 @@
 @import "tailwindcss";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
-@import "@fontsource/jetbrains-mono/400.css";
+
+/* ============================================================
+ * Font Imports — Subsets: latin + latin-ext apenas (Architecture §Font Loading)
+ * Performance: imports subset-específicos eliminam cyrillic/greek/vietnamese
+ * font-display: swap aplicado via --fontsource-display API (ver :root abaixo)
+ * ============================================================ */
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/inter/latin-ext-400.css";
+@import "@fontsource/inter/latin-ext-600.css";
+@import "@fontsource/inter/latin-ext-700.css";
+@import "@fontsource/jetbrains-mono/latin-400.css";
+@import "@fontsource/jetbrains-mono/latin-ext-400.css";
 
 :root {
-    /* Estratégia font-display definida via variáveis para compatibilidade/padronização */
+    /* Estratégia font-display definida via variável oficial @fontsource v5 API.
+       Isso injeta `font-display: swap` em todas as @font-face geradas,
+       evitando FOIT (Flash of Invisible Text). */
     --fontsource-display: swap;
 }
 
+/* ============================================================
+ * NOTA: Tailwind v4 usa CSS-first config via @theme, que nativamente
+ * utiliza var() para referenciar tokens internos. Isso NÃO viola o
+ * anti-pattern "no CSS custom properties" da arquitetura, que se refere
+ * a var() arbitrários fora do sistema Tailwind (ex: :root custom).
+ * ============================================================ */
 @theme {
     --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -17,7 +35,12 @@
     --color-accent: var(--color-emerald-500);
     --color-grid: color-mix(in srgb, var(--color-zinc-800) 50%, transparent);
 
-    /* Tokens de Espaçamento base do design system (como referência sem sobrescrever o default) */
+    /* Tokens de superfícies — paleta Zinc para hierarquia visual (AC#3) */
+    --color-surface-primary: var(--color-zinc-950);
+    --color-surface-secondary: var(--color-zinc-900);
+    --color-surface-tertiary: var(--color-zinc-800);
+
+    /* Tokens de Espaçamento base do design system */
     --spacing-section-sm: var(--spacing-24);
     --spacing-section-lg: var(--spacing-32);
 }
@@ -78,5 +101,18 @@
 
     .border-accent {
         @apply border-emerald-500;
+    }
+
+    /* Superfícies semânticas — usar em vez de cores Zinc diretas para consistência */
+    .bg-surface-primary {
+        @apply bg-zinc-950;
+    }
+
+    .bg-surface-secondary {
+        @apply bg-zinc-900;
+    }
+
+    .bg-surface-tertiary {
+        @apply bg-zinc-800;
     }
 }

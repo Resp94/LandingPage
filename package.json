@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write \"src/**/*.{astro,css,ts,html}\"",
+    "format:check": "prettier --check \"src/**/*.{astro,css,ts,html}\""
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
@@ -18,5 +20,9 @@
     "astro": "^5.17.1",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }
