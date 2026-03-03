@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write \"src/**/*.{astro,css,ts,html}\"",
-    "format:check": "prettier --check \"src/**/*.{astro,css,ts,html}\""
+    "format:check": "prettier --check \"src/**/*.{astro,css,ts,html}\"",
+    "lighthouse": "lhci autorun"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

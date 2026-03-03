@@ -70,6 +70,11 @@ const schema = {
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+    <!-- Cloudflare Web Analytics -->
+    {import.meta.env.CF_WEB_ANALYTICS_TOKEN && (
+      <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={`{"token": "${import.meta.env.CF_WEB_ANALYTICS_TOKEN}"}`} />
+    )}
   </head>
   <body class="bg-zinc-950 text-zinc-100 flex flex-col min-h-screen">
     <Header />
