@@ -44,7 +44,7 @@ development_status:
   epic-1: in-progress
   1-1-project-initialization-tooling-setup: review
   1-2-design-system-global-styles: in-progress
-  1-3-baselayout-header-footer: review
+  1-3-baselayout-header-footer: done
   1-4-scrollreveal-component-animations: backlog
   1-5-ci-cd-pipeline-deployment: backlog
   epic-1-retrospective: optional

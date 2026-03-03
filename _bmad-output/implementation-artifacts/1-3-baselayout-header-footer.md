@@ -1,6 +1,6 @@
 # Story 1.3: BaseLayout, Header & Footer
 
-Status: review
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -75,7 +75,7 @@ Antigravity
 
 ### Debug Log References
 
-- Astro check aprovado
+- Astro check aprovado (pré-review e pós-review: 0 erros, 0 warnings)
 
 ### Completion Notes List
 
@@ -86,8 +86,38 @@ Antigravity
 
 ### File List
 
-- src/components/ui/TacticalCTA.astro (Novo)
+- src/components/ui/TacticalCTA.astro (Novo → Atualizado via Review)
 - src/components/layout/Header.astro (Novo)
-- src/components/layout/Footer.astro (Novo)
-- src/layouts/BaseLayout.astro (Novo)
+- src/components/layout/Footer.astro (Novo → Atualizado via Review)
+- src/layouts/BaseLayout.astro (Novo → Atualizado via Review)
+- public/og-image.png (Novo via Review)
+
+### Change Log
+
+- 2026-03-02: Implementação inicial (Antigravity)
+- 2026-03-03: Code Review + Fixes aplicados (Antigravity)
+
+## Senior Developer Review (AI)
+
+**Reviewer:** Jonathas — 2026-03-03
+**Outcome:** ✅ Approved (com fixes aplicados)
+
+### Issues Encontrados e Resolvidos
+
+| # | Severidade | Descrição | Fix Aplicado |
+|---|------------|-----------|-------------|
+| H2 | 🔴 HIGH | `og-image.png` referenciado mas inexistente | Gerado e salvo em `public/og-image.png` |
+| H3 | 🔴 HIGH | `logo.png` no JSON-LD Schema inexistente | Referência alterada para `/favicon.svg` (existente) |
+| H4 | 🔴 HIGH | TacticalCTA sem `aria-label` (violação AC 12) | Adicionado `aria-label="Agendar Auditoria Estratégica"` |
+| M2 | 🟡 MEDIUM | TacticalCTA com estilo sólido verde, conflitando com UX Spec (ghost button) | Refatorado para ghost button com `border-zinc-700`, `tracking-wider`, chevron icon com `hover:translate-x-1` |
+| M3 | 🟡 MEDIUM | Footer com `href="#"` no LinkedIn (page jump) e apenas 1 rede social | LinkedIn href corrigido para URL real com `target="_blank" rel="noopener noreferrer"`, Instagram adicionado |
+| M4 | 🟡 MEDIUM | Importação duplicada de fonts Inter entre BaseLayout e global.css | CSS imports removidos do BaseLayout (mantidos em global.css); woff2 URL imports preservados para preload |
+
+### Issues Documentados (Não corrigidos — Fora de Escopo)
+
+| # | Severidade | Descrição | Motivo |
+|---|------------|-----------|--------|
+| H1 | 🔴 HIGH | `index.astro` não usa `BaseLayout.astro` — SEO/OG/fonts inativos | Planejado para Story 2.5 (Index Page Assembly) |
+| L1 | 🟢 LOW | Header sem tag `<nav>` semântica | Melhoria menor; não bloqueia funcionalidade |
+| L2 | 🟢 LOW | Domínio email `aptus.com` vs `aptus.com.br` inconsistente | Requer decisão de negócio |
 

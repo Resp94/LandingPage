@@ -1,8 +1,6 @@
 ---
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
-
+// Font CSS (@font-face) registrado centralmente em global.css
+// Aqui importamos apenas as URLs dos woff2 para os preload links
 import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
 import inter600 from '@fontsource/inter/files/inter-latin-600-normal.woff2?url';
 import inter700 from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
@@ -31,7 +29,7 @@ const schema = {
   "@type": "Organization",
   "name": "Aptus",
   "url": canonicalURL.toString(),
-  "logo": new URL("/logo.png", canonicalURL).toString(),
+  "logo": new URL("/favicon.svg", canonicalURL).toString(),
   "contactPoint": {
     "@type": "ContactPoint",
     "email": "contato@aptus.com",
