@@ -115,4 +115,20 @@
     .bg-surface-tertiary {
         @apply bg-zinc-800;
     }
+
+    /* ============================================================
+     * Scroll Reveal Utilities
+     * Define classes para IntersectionObserver baseado scroll-reveal
+     * ============================================================ */
+    .scroll-reveal {
+        @apply opacity-0 translate-y-4 transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0;
+    }
+
+    .scroll-reveal.is-revealed {
+        @apply opacity-100 translate-y-0 motion-reduce:opacity-100 motion-reduce:translate-y-0;
+    }
+
+    /* O Tailwind já traz delay-75, delay-100, delay-150 natively, 
+     * mas adicionando alguns defaults específicos se necessário, 
+     * podemos usá-los diretamente no HTML sem adicionar CSS custom. */
 }
