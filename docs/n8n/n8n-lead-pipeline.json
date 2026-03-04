@@ -1,0 +1,179 @@
+{
+  "name": "Typeform/Tally Webhook to CRM",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "aptus-lead-pipeline",
+        "authentication": "headerAuth",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "1",
+      "name": "Webhook Inbound",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        260,
+        300
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "1",
+          "name": "Header Auth"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body ?? $json;\n\nconst toArray = (value) => {\n  if (Array.isArray(value)) return value;\n  if (typeof value === 'string' && value.trim().length > 0) {\n    return value.split(',').map((item) => item.trim()).filter(Boolean);\n  }\n  return [];\n};\n\nreturn [{\n  json: {\n    lead_name: body.lead_name ?? body.name ?? body.full_name ?? '',\n    company_name: body.company_name ?? body.company ?? '',\n    email: body.email ?? body.contact_email ?? '',\n    phone_number: body.phone_number ?? body.phone ?? '',\n    pain_points: toArray(body.pain_points ?? body.main_pains),\n    current_tooling: body.current_tooling ?? body.current_stack ?? '',\n    budget_range: body.budget_range ?? body.budget ?? '',\n    urgency: body.urgency ?? body.priority ?? '',\n    source: body.source ?? body.form_source ?? 'landing_page',\n    submitted_at: body.submitted_at ?? body.created_at ?? new Date().toISOString()\n  }\n}];"
+      },
+      "id": "2",
+      "name": "Normalize Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "create",
+        "databaseId": {
+          "__rl": true,
+          "value": "={{ $env.N8N_NOTION_DATABASE_ID }}",
+          "mode": "id"
+        },
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Name|title",
+              "titleValue": "={{ $json.lead_name }}"
+            },
+            {
+              "key": "Empresa|rich_text",
+              "richTextValue": "={{ $json.company_name }}"
+            },
+            {
+              "key": "E-mail|email",
+              "emailValue": "={{ $json.email }}"
+            },
+            {
+              "key": "Telefone|phone_number",
+              "phoneValue": "={{ $json.phone_number }}"
+            },
+            {
+              "key": "Dores Principais|multi_select",
+              "multiSelectValue": "={{ ($json.pain_points || []).join(',') }}"
+            },
+            {
+              "key": "Stack Atual|rich_text",
+              "richTextValue": "={{ $json.current_tooling }}"
+            },
+            {
+              "key": "Orcamento|select",
+              "selectValue": "={{ $json.budget_range }}"
+            },
+            {
+              "key": "Urgencia|select",
+              "selectValue": "={{ $json.urgency }}"
+            },
+            {
+              "key": "Origem|select",
+              "selectValue": "={{ $json.source }}"
+            },
+            {
+              "key": "Data de Entrada|date",
+              "dateValue": "={{ $json.submitted_at }}"
+            }
+          ]
+        }
+      },
+      "id": "3",
+      "name": "Notion Create Lead",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        700,
+        300
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "2",
+          "name": "Notion API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "channel": "={{ $env.N8N_SLACK_CHANNEL_ID }}",
+        "text": "=Novo lead qualificado recebido: {{ $json.lead_name }} da empresa {{ $json.company_name }}!\\nResponder em menos de 24h!\\n\\nEmail: {{ $json.email }}\\nTelefone: {{ $json.phone_number }}",
+        "blocksUi": {
+          "blocksValues": []
+        },
+        "otherOptions": {}
+      },
+      "id": "4",
+      "name": "Slack Notification",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.1,
+      "position": [
+        940,
+        300
+      ],
+      "credentials": {
+        "slackApi": {
+          "id": "3",
+          "name": "Slack API"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook Inbound": {
+      "main": [
+        [
+          {
+            "node": "Normalize Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Payload": {
+      "main": [
+        [
+          {
+            "node": "Notion Create Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion Create Lead": {
+      "main": [
+        [
+          {
+            "node": "Slack Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "errorWorkflow": "={{ $env.N8N_ERROR_WORKFLOW_ID }}"
+  },
+  "versionId": "8e5031ca-9d2a-4b7e-9127-fe2d58f98dea",
+  "id": "2",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  }
+}

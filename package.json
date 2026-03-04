@@ -17,7 +17,8 @@
     "test:story-3-2": "node tests/story-3-2-diagnosticmodal.test.mjs",
     "test:story-3-3": "node tests/story-3-3-formembed.test.mjs",
     "test:story-3-4": "node tests/story-3-4-successstate.test.mjs",
-    "test": "npm run test:story-2-4 && npm run test:story-2-5 && npm run test:story-3-1 && npm run test:story-3-2 && npm run test:story-3-3 && npm run test:story-3-4"
+    "test:story-3-5": "node tests/story-3-5-webhook-pipeline.test.mjs",
+    "test": "npm run test:story-2-4 && npm run test:story-2-5 && npm run test:story-3-1 && npm run test:story-3-2 && npm run test:story-3-3 && npm run test:story-3-4 && npm run test:story-3-5"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
