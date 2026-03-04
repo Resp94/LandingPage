@@ -37,13 +37,13 @@
     'Courier New', monospace;
 
   /* Cores e tokens dedicados - Atualizados baseados na Logo da Aptus */
-  --color-accent: #f96a04;
-  --color-grid: color-mix(in srgb, var(--color-zinc-800) 50%, transparent);
+  --color-accent: #FC5400;
+  --color-grid: color-mix(in srgb, var(--color-surface-secondary) 50%, transparent);
 
-  /* Tokens de superfícies — paleta Zinc para hierarquia visual (AC#3) */
-  --color-surface-primary: var(--color-zinc-950);
-  --color-surface-secondary: var(--color-zinc-900);
-  --color-surface-tertiary: var(--color-zinc-800);
+  /* Tokens de superfícies — paleta Brand para hierarquia visual (AC#3) */
+  --color-surface-primary: #0C0000;
+  --color-surface-secondary: #3C0000;
+  --color-surface-tertiary: #600000;
 
   /* Tokens de Espaçamento base do design system */
   --spacing-section-sm: var(--spacing-24);
@@ -52,18 +52,18 @@
 
 @layer base {
   body {
-    /* bg-zinc-950 (#09090b) como fundo principal, text-zinc-400 para corpo (nunca 100% branco) */
-    @apply bg-zinc-950 font-sans text-zinc-400 antialiased;
+    /* Fundo principal profundo, texto âmbar suavizado para boa leitura no escuro */
+    @apply bg-[#0C0000] font-sans text-[#FC9C00]/80 antialiased;
   }
 
-  /* text-zinc-100 para headings */
+  /* text-[#FFFFFF] para headings para criar destaque com o fundo escuro */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    @apply tracking-tight text-zinc-100;
+    @apply tracking-tight text-[#FFFFFF];
   }
 
   h1 {
@@ -92,34 +92,10 @@
 
   /* Estabelecido para as linhas do "grid de engenharia" */
   .border-grid {
-    @apply border-zinc-800/50;
+    @apply border-[#3C0000]/50;
   }
 
-  /* Cor de sotaque reservada para CTAs e estados */
-  .text-accent {
-    color: var(--color-accent);
-  }
 
-  .bg-accent {
-    background-color: var(--color-accent);
-  }
-
-  .border-accent {
-    border-color: var(--color-accent);
-  }
-
-  /* Superfícies semânticas — usar em vez de cores Zinc diretas para consistência */
-  .bg-surface-primary {
-    @apply bg-zinc-950;
-  }
-
-  .bg-surface-secondary {
-    @apply bg-zinc-900;
-  }
-
-  .bg-surface-tertiary {
-    @apply bg-zinc-800;
-  }
 
   /* ============================================================
      * Scroll Reveal Utilities
