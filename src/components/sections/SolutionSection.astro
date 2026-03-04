@@ -29,11 +29,11 @@ const steps = [
 ];
 ---
 
-<section class="w-full py-24 lg:py-32 bg-zinc-950">
+<section id="metodo-aptus" class="w-full py-24 lg:py-32 bg-zinc-950" aria-labelledby="solution-title">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="scroll-reveal mb-16 lg:mb-24 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-      <h2 class="text-zinc-100 font-bold tracking-tight text-4xl lg:text-5xl max-w-2xl">
+      <h2 id="solution-title" class="text-zinc-100 font-bold tracking-tight text-4xl lg:text-5xl max-w-2xl">
         Engenharia operacional.<br /> 
         <span class="text-zinc-400">O Método Aptus.</span>
       </h2>
@@ -43,9 +43,9 @@ const steps = [
     </div>
 
     <!-- Layout responsivo com CSS Grid e divisores (blueprint blueprint) -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-zinc-800/50 border border-zinc-800/50 bg-zinc-950/50 shadow-2xl">
+    <ol class="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-zinc-800/50 border border-zinc-800/50 bg-zinc-950/50 shadow-2xl">
       {steps.map((step) => (
-        <article class={`scroll-reveal p-8 lg:p-12 flex flex-col justify-between ${step.delayClass}`}>
+        <li class={`scroll-reveal p-8 lg:p-12 flex flex-col justify-between ${step.delayClass}`}>
           <div>
             <div class="mb-8 border-b border-zinc-800/50 pb-6 w-16">
               <span class="font-mono text-4xl text-zinc-500 tracking-tighter">{step.number}</span>
@@ -58,9 +58,9 @@ const steps = [
           <div>
             <DataMatrixBadge label={step.metricLabel} value={step.metricValue} />
           </div>
-        </article>
+        </li>
       ))}
-    </div>
+    </ol>
     
   </div>
 </section>

@@ -20,6 +20,7 @@ const packagePath = join(root, 'package.json');
 const indexPath = join(root, 'src/pages/index.astro');
 const baseLayoutPath = join(root, 'src/layouts/BaseLayout.astro');
 const heroPath = join(root, 'src/components/sections/HeroSection.astro');
+const solutionPath = join(root, 'src/components/sections/SolutionSection.astro');
 const ctaPath = join(root, 'src/components/sections/CTASection.astro');
 const ogImagePath = join(root, 'public/og-image.png');
 const lighthouseConfigPath = join(root, 'lighthouserc.cjs');
@@ -28,6 +29,7 @@ assert(existsSync(packagePath), 'Missing package.json');
 assert(existsSync(indexPath), 'Missing src/pages/index.astro');
 assert(existsSync(baseLayoutPath), 'Missing src/layouts/BaseLayout.astro');
 assert(existsSync(heroPath), 'Missing src/components/sections/HeroSection.astro');
+assert(existsSync(solutionPath), 'Missing src/components/sections/SolutionSection.astro');
 assert(existsSync(ctaPath), 'Missing src/components/sections/CTASection.astro');
 assert(existsSync(ogImagePath), 'Missing public/og-image.png');
 assert(existsSync(lighthouseConfigPath), 'Missing lighthouserc.cjs');
@@ -61,7 +63,10 @@ assert(baseLayout.includes("image = '/og-image.png'"), 'BaseLayout default OG im
 assert(baseLayout.includes('property="og:image"'), 'BaseLayout must expose og:image meta tag');
 
 const hero = readFileSync(heroPath, 'utf8');
-assert(hero.includes('href="#auditoria"'), 'Hero CTA must point to #auditoria');
+assert(hero.includes('href="#metodo-aptus"'), 'Hero skip link must point to #metodo-aptus');
+
+const solution = readFileSync(solutionPath, 'utf8');
+assert(solution.includes('id="metodo-aptus"'), 'Solution section must define id="metodo-aptus"');
 
 const cta = readFileSync(ctaPath, 'utf8');
 assert(cta.includes('id="auditoria"'), 'CTA section must define id="auditoria"');
