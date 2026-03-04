@@ -56,32 +56,3 @@ const {
     <path d="m12 5 7 7-7 7" />
   </svg>
 </button>
-
-<script>
-  function setupTacticalCTAs() {
-    const buttons = document.querySelectorAll('button[data-tactical-cta]');
-
-    buttons.forEach((button) => {
-      if (!(button instanceof HTMLButtonElement)) return;
-      if (button.dataset.tacticalCtaBound === 'true') return;
-
-      button.dataset.tacticalCtaBound = 'true';
-      button.addEventListener('click', () => {
-        if (button.disabled) return;
-
-        button.dispatchEvent(
-          new CustomEvent('open-diagnostic', {
-            bubbles: true,
-            cancelable: true,
-          })
-        );
-      });
-    });
-  }
-
-  // Set up on initial load
-  setupTacticalCTAs();
-
-  // Set up on view transitions if enabled
-  document.addEventListener('astro:page-load', setupTacticalCTAs);
-</script>

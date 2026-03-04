@@ -76,9 +76,38 @@ Gemini 2.5 Pro (BMAD-Agent)
 - Arquivo `HeroSection.astro` implementado obedecendo rigorosamente à regra de Zero-JS e estrutura HTML semântica (SSG).
 - Tailwind v4 classes aplicadas para tipografia impecável usando Inter.
 - Responsividade garantida (textos variam tamanho e alinhamento: left mobile / center desktop).
+- Code review AI aplicado com correções de conformidade: CTA copy alinhada, subheadline limitada a 3 linhas, cobertura de teste específica da story 2.1 e remoção de script inline do `TacticalCTA`.
 
 ## File List
 - `src/components/sections/HeroSection.astro` (Criado)
+- `src/components/ui/TacticalCTA.astro` (Atualizado - componente estático sem script inline)
+- `src/components/ui/DiagnosticModal.astro` (Atualizado - delegação de clique para dispatch `open-diagnostic`)
+- `tests/story-2-1-hero.test.mjs` (Criado - validação completa dos ACs da Story 2.1)
+- `tests/story-3-1-tacticalcta.test.mjs` (Atualizado - valida fluxo de trigger delegado)
+- `package.json` (Atualizado - script `test:story-2-1`)
 
 ## Change Log
 - 2026-03-03: Implementada a `HeroSection.astro` com markup estático otimizado par LCP, focando no Dark Mode e paleta Zinc.
+- 2026-03-04: Review AI resolvida com ajustes de ACs e testes; story mantida em `done`.
+
+## Senior Developer Review (AI)
+
+### Outcome
+- Approved after fixes.
+
+### Summary of Fixes
+- Removido JavaScript inline de `TacticalCTA.astro`; trigger de abertura do modal centralizado no script de `DiagnosticModal.astro`.
+- Alinhado copy do CTA da Hero para `"Agendar Auditoria"` conforme AC.
+- Aplicado `line-clamp-3` na subheadline para garantir limite de até 3 linhas.
+- Adicionado teste dedicado `tests/story-2-1-hero.test.mjs` para validar os ACs da Story 2.1.
+- Atualizado `tests/story-3-1-tacticalcta.test.mjs` para a arquitetura de click delegation.
+
+### AC Validation Snapshot
+- AC3 headline + tipografia: PASS
+- AC4 subheadline + `text-zinc-400` + 3 linhas: PASS
+- AC5 TacticalCTA proeminente com copy correta: PASS
+- AC6 spacing + centering: PASS
+- AC7 `.scroll-reveal`: PASS
+- AC8 responsividade + alinhamento mobile left: PASS
+- AC9 sem imagens genéricas: PASS
+- AC10 estrutura estática no `HeroSection.astro` + guarda de testes: PASS

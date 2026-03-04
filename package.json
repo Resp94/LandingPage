@@ -11,6 +11,7 @@
     "format:check": "prettier --check \"src/**/*.{css,ts,html}\"",
     "lighthouse": "npx -y @lhci/cli autorun --config=lighthouserc.cjs",
     "lint": "astro check && npm run format:check",
+    "test:story-2-1": "node tests/story-2-1-hero.test.mjs",
     "test:story-2-3": "node tests/story-2-3-solution.test.mjs",
     "test:story-2-4": "node tests/story-2-4-smoke.test.mjs",
     "test:story-2-5": "node tests/story-2-5-smoke.test.mjs",
@@ -19,7 +20,7 @@
     "test:story-3-3": "node tests/story-3-3-formembed.test.mjs",
     "test:story-3-4": "node tests/story-3-4-successstate.test.mjs",
     "test:story-3-5": "node tests/story-3-5-webhook-pipeline.test.mjs",
-    "test": "npm run test:story-2-3 && npm run test:story-2-4 && npm run test:story-2-5 && npm run test:story-3-1 && npm run test:story-3-2 && npm run test:story-3-3 && npm run test:story-3-4 && npm run test:story-3-5"
+    "test": "npm run test:story-2-1 && npm run test:story-2-3 && npm run test:story-2-4 && npm run test:story-2-5 && npm run test:story-3-1 && npm run test:story-3-2 && npm run test:story-3-3 && npm run test:story-3-4 && npm run test:story-3-5"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

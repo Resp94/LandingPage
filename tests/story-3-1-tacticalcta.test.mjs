@@ -11,16 +11,19 @@ const ctaPath = join(root, 'src/components/ui/TacticalCTA.astro');
 const heroPath = join(root, 'src/components/sections/HeroSection.astro');
 const headerPath = join(root, 'src/components/layout/Header.astro');
 const ctaSectionPath = join(root, 'src/components/sections/CTASection.astro');
+const modalPath = join(root, 'src/components/ui/DiagnosticModal.astro');
 
 assert(existsSync(ctaPath), 'Missing src/components/ui/TacticalCTA.astro');
 assert(existsSync(heroPath), 'Missing src/components/sections/HeroSection.astro');
 assert(existsSync(headerPath), 'Missing src/components/layout/Header.astro');
 assert(existsSync(ctaSectionPath), 'Missing src/components/sections/CTASection.astro');
+assert(existsSync(modalPath), 'Missing src/components/ui/DiagnosticModal.astro');
 
 const ctaContent = readFileSync(ctaPath, 'utf8');
 const heroContent = readFileSync(heroPath, 'utf8');
 const headerContent = readFileSync(headerPath, 'utf8');
 const ctaSectionContent = readFileSync(ctaSectionPath, 'utf8');
+const modalContent = readFileSync(modalPath, 'utf8');
 
 // Task 1: Semantic Structure, placement, and Props
 assert(ctaContent.includes('<button'), 'Must use <button> element');
@@ -60,15 +63,19 @@ assert(ctaContent.includes('focus-visible:ring-2'), 'Must include focus-visible:
 assert(ctaContent.includes('focus-visible:ring-emerald-500'), 'Must include focus-visible:ring-emerald-500');
 
 // Task 4: Action Trigger Logic
-assert(ctaContent.includes('<script'), 'Must include client-side script');
+assert(ctaContent.includes('data-tactical-cta'), 'CTA button must expose data-tactical-cta trigger marker');
 assert(
-  ctaContent.includes("CustomEvent('open-diagnostic'") || ctaContent.includes('CustomEvent("open-diagnostic"'),
-  'Must dispatch open-diagnostic custom event'
+  modalContent.includes("target?.closest('button[data-tactical-cta]')"),
+  'DiagnosticModal must detect CTA clicks by delegated selector'
 );
-assert(ctaContent.includes('dispatchEvent'), 'Must call dispatchEvent');
-assert(!ctaContent.includes('cloneNode(true)'), 'Must not clone CTA DOM nodes when binding events');
-assert(!ctaContent.includes('replaceChild('), 'Must not replace CTA nodes when binding events');
-assert(!ctaContent.includes('setTimeout('), 'Click dispatch should not be delayed');
+assert(
+  modalContent.includes("new CustomEvent('open-diagnostic'") ||
+    modalContent.includes('new CustomEvent("open-diagnostic"'),
+  'DiagnosticModal delegated click handler must dispatch open-diagnostic custom event'
+);
+assert(modalContent.includes('document.addEventListener(\'click\', handleTacticalCtaClick)'), 'Delegated click listener must be bound globally');
+assert(!modalContent.includes('cloneNode(true)'), 'Must not clone CTA DOM nodes when binding events');
+assert(!modalContent.includes('replaceChild('), 'Must not replace CTA nodes when binding events');
 
 // Task 5: Responsive layout
 assert(ctaContent.includes('w-full'), 'Must dynamically apply w-full');

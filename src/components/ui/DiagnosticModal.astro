@@ -185,6 +185,20 @@ const {
     });
   }
 
+  function handleTacticalCtaClick(event: Event) {
+    const target = event.target as Element | null;
+    const trigger = target?.closest('button[data-tactical-cta]');
+
+    if (!(trigger instanceof HTMLButtonElement) || trigger.disabled) return;
+
+    document.dispatchEvent(
+      new CustomEvent('open-diagnostic', {
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+  }
+
   if (root.dataset.diagnosticModalVisibilityBound !== 'true') {
     root.dataset.diagnosticModalVisibilityBound = 'true';
     initWhenVisible();
@@ -194,5 +208,10 @@ const {
   if (root.dataset.diagnosticModalOpenBootstrapBound !== 'true') {
     root.dataset.diagnosticModalOpenBootstrapBound = 'true';
     document.addEventListener('open-diagnostic', ensureInitOnFirstOpen, { capture: true });
+  }
+
+  if (root.dataset.diagnosticModalCtaBound !== 'true') {
+    root.dataset.diagnosticModalCtaBound = 'true';
+    document.addEventListener('click', handleTacticalCtaClick);
   }
 </script>
