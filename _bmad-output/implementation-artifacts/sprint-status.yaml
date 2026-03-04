@@ -50,7 +50,7 @@ development_status:
   epic-1-retrospective: optional
 
   # === Epic 2: Narrative Content & Authority Positioning ===
-  epic-2: in-progress
+  epic-2: done
   2-1-hero-section-the-choque-empatico: done
   2-2-problem-section-o-voo-cego: done
   2-3-solution-section-metodo-aptus: done
@@ -59,7 +59,7 @@ development_status:
   epic-2-retrospective: optional
 
   # === Epic 3: Lead Qualification Engine & Conversion ===
-  epic-3: in-progress
+  epic-3: done
   3-1-tacticalcta-component: done
   3-2-diagnosticmodal-overlay-focus-lock: done
   3-3-typeform-tally-embed-form-integration: done
