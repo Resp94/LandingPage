@@ -36,8 +36,8 @@
     'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
     'Courier New', monospace;
 
-  /* Cores e tokens dedicados */
-  --color-accent: var(--color-emerald-500);
+  /* Cores e tokens dedicados - Atualizados baseados na Logo da Aptus */
+  --color-accent: #f96a04;
   --color-grid: color-mix(in srgb, var(--color-zinc-800) 50%, transparent);
 
   /* Tokens de superfícies — paleta Zinc para hierarquia visual (AC#3) */
@@ -89,22 +89,23 @@
 }
 
 @layer utilities {
+
   /* Estabelecido para as linhas do "grid de engenharia" */
   .border-grid {
     @apply border-zinc-800/50;
   }
 
-  /* Cor de sotaque Emerald (#10b981) reservada para CTAs e estados */
+  /* Cor de sotaque reservada para CTAs e estados */
   .text-accent {
-    @apply text-emerald-500;
+    color: var(--color-accent);
   }
 
   .bg-accent {
-    @apply bg-emerald-500;
+    background-color: var(--color-accent);
   }
 
   .border-accent {
-    @apply border-emerald-500;
+    border-color: var(--color-accent);
   }
 
   /* Superfícies semânticas — usar em vez de cores Zinc diretas para consistência */
