@@ -29,34 +29,34 @@ const steps = [
 ];
 ---
 
-<section id="metodo-aptus" class="w-full py-24 lg:py-32 bg-surface-primary" aria-labelledby="solution-title">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="metodo-aptus" class="w-full bg-[var(--color-surface-light)] py-24 lg:py-32" aria-labelledby="solution-title">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     
-    <div class="scroll-reveal mb-16 lg:mb-24 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-      <h2 id="solution-title" class="text-white/90 font-bold tracking-tight text-4xl lg:text-5xl max-w-2xl">
+    <div class="scroll-reveal mb-16 flex flex-col gap-6 lg:mb-24 lg:flex-row lg:items-end lg:justify-between">
+      <h2 id="solution-title" class="max-w-2xl text-4xl font-bold tracking-tight text-[var(--color-surface-primary)] lg:text-5xl">
         Engenharia operacional.<br /> 
-        <span class="text-white/60">O Método Aptus.</span>
+        <span class="text-[var(--color-accent-dark)]">O Método Aptus.</span>
       </h2>
-      <p class="max-w-xl text-white/60 text-lg leading-relaxed">
+      <p class="max-w-xl text-lg leading-relaxed text-[var(--color-surface-secondary)]">
         Uma abordagem metódica de desenvolvimento para trazer precisão ao seu backoffice e prepará-lo para escala.
       </p>
     </div>
 
     <!-- Layout responsivo com CSS Grid e divisores (blueprint blueprint) -->
-    <ol class="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-surface-tertiary/50 border border-surface-tertiary/50 bg-surface-primary/50 shadow-2xl">
+    <ol class="grid grid-cols-1 divide-y divide-[var(--color-surface-secondary)]/10 border border-[var(--color-surface-secondary)]/10 bg-white shadow-xl lg:grid-cols-3 lg:divide-x lg:divide-y-0 rounded-3xl overflow-hidden">
       {steps.map((step) => (
-        <li class={`scroll-reveal p-8 lg:p-12 flex flex-col justify-between ${step.delayClass}`}>
+        <li class={`scroll-reveal flex flex-col justify-between p-8 lg:p-12 ${step.delayClass}`}>
           <div>
-            <div class="mb-8 border-b border-surface-tertiary/50 pb-6 w-16">
-              <span class="font-mono text-4xl text-white/50 tracking-tighter">{step.number}</span>
+            <div class="mb-8 w-16 border-b border-[var(--color-surface-secondary)]/10 pb-6">
+              <span class="font-mono text-4xl tracking-tighter text-[var(--color-surface-primary)]/20">{step.number}</span>
             </div>
-            <h3 class="text-2xl font-semibold text-white/90 mb-4">{step.title}</h3>
-            <p class="text-white/60 leading-relaxed max-w-sm mb-12 line-clamp-3">
+            <h3 class="mb-4 text-2xl font-semibold text-[var(--color-surface-primary)]">{step.title}</h3>
+            <p class="mb-12 line-clamp-3 max-w-sm leading-relaxed text-[var(--color-surface-tertiary)]/80">
               {step.description}
             </p>
           </div>
           <div>
-            <DataMatrixBadge label={step.metricLabel} value={step.metricValue} />
+            <DataMatrixBadge label={step.metricLabel} value={step.metricValue} variant="light" />
           </div>
         </li>
       ))}

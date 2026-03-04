@@ -2,13 +2,19 @@
 interface Props {
   label?: string;
   value: string | number;
+  variant?: 'dark' | 'light';
 }
 
-const { label, value } = Astro.props;
+const { label, value, variant = 'dark' } = Astro.props;
+
+const isLight = variant === 'light';
+const baseColor = isLight ? 'text-[var(--color-surface-secondary)]' : 'text-white/90';
+const chevronColor = isLight ? 'text-[var(--color-surface-tertiary)]/50' : 'text-white/50';
+const labelColor = isLight ? 'text-[var(--color-surface-tertiary)]' : 'text-white/60';
 ---
 
-<span class="inline-flex items-center gap-2 font-mono text-sm tracking-tight text-white/90">
-  <span class="text-white/50 select-none">&gt;</span>
-  {label && <span class="text-white/60">{label}:</span>}
+<span class={`inline-flex items-center gap-2 font-mono text-sm tracking-tight ${baseColor}`}>
+  <span class={`select-none ${chevronColor}`}>&gt;</span>
+  {label && <span class={labelColor}>{label}:</span>}
   <span class="font-semibold">{value}</span>
 </span>

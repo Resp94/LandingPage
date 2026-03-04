@@ -1,0 +1,112 @@
+---
+const faqs = [
+  {
+    question: "Como funciona a Auditoria Estratégica?",
+    answer: "Nossa auditoria é focada em mapear os gargalos da sua operação atual. Analisamos ferramentas, integrações e processos manuais para entregar um blueprint técnico claro."
+  },
+  {
+    question: "A Aptus Flow desenvolve sistemas do zero?",
+    answer: "Nosso foco não é criar sistemas do zero, mas conectar as ferramentas que você já usa (ou sugerir plataformas No-Code/Low-Code enterprise) e criar arquiteturas ágeis e escaláveis."
+  },
+  {
+    question: "Quanto tempo dura a implementação do Método Aptus?",
+    answer: "A auditoria dura cerca de 7 dias. Após aprovação do blueprint, o deploy das soluções pode variar de 2 a 6 semanas, sempre priorizando entregas incrementais."
+  },
+  {
+    question: "Minha equipe precisará de treinamento?",
+    answer: "Sim, e nós fornecemos. O objetivo é remover a dependência de memória, entregando processos documentados e treinando a equipe para operar a nova infraestrutura com confiança."
+  }
+];
+---
+
+<section
+  id="faq"
+  class="w-full bg-[var(--color-surface-light)] py-24 pb-32"
+  aria-labelledby="faq-title"
+>
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <div class="scroll-reveal mb-12 text-center md:mb-16">
+      <h2 id="faq-title" class="text-3xl font-bold tracking-tight text-[var(--color-surface-primary)] md:text-4xl">
+        Perguntas Frequentes
+      </h2>
+    </div>
+
+    <!-- Accordion Minimalista -->
+    <div class="divide-y divide-[var(--color-surface-secondary)]/10 border-b border-[var(--color-surface-secondary)]/10" data-faq-accordion>
+      {faqs.map((faq, index) => (
+        <div class="faq-item py-6">
+          <button
+            class="faq-button flex w-full items-center justify-between text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
+            aria-expanded="false"
+            aria-controls={`faq-answer-${index}`}
+            id={`faq-question-${index}`}
+          >
+            <span class="text-lg font-semibold text-[var(--color-surface-primary)] hover:text-[var(--color-accent)] transition-colors">
+              {faq.question}
+            </span>
+            <span class="ml-6 flex h-7 items-center">
+              <svg class="faq-icon h-5 w-5 text-[var(--color-surface-primary)] transition-transform duration-300 ease-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </button>
+          
+          <div
+            id={`faq-answer-${index}`}
+            class="faq-answer grid grid-rows-[0fr] overflow-hidden transition-all duration-300 ease-out"
+            role="region"
+            aria-labelledby={`faq-question-${index}`}
+          >
+            <div class="min-h-0">
+              <p class="pt-4 pr-12 text-base leading-relaxed text-[var(--color-surface-tertiary)]/90">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Simple accessible accordion logic using Grid trick to animate height to auto
+  function initFAQ() {
+    const buttons = document.querySelectorAll('.faq-button');
+    
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        const ariaControls = button.getAttribute('aria-controls');
+        const answer = document.getElementById(ariaControls!);
+        const icon = button.querySelector('.faq-icon');
+        
+        // Toggle current
+        if (expanded) {
+          button.setAttribute('aria-expanded', 'false');
+          answer?.classList.replace('grid-rows-[1fr]', 'grid-rows-[0fr]');
+          icon?.classList.remove('rotate-180');
+        } else {
+          // Close others (optional)
+          /*
+          buttons.forEach((btn) => {
+            btn.setAttribute('aria-expanded', 'false');
+            const otherControls = btn.getAttribute('aria-controls');
+            document.getElementById(otherControls!)?.classList.replace('grid-rows-[1fr]', 'grid-rows-[0fr]');
+            btn.querySelector('.faq-icon')?.classList.remove('rotate-180');
+          });
+          */
+          
+          // Open current
+          button.setAttribute('aria-expanded', 'true');
+          answer?.classList.replace('grid-rows-[0fr]', 'grid-rows-[1fr]');
+          icon?.classList.add('rotate-180');
+        }
+      });
+    });
+  }
+
+  // Run on first load and view transitions
+  initFAQ();
+  document.addEventListener('astro:page-load', initFAQ);
+</script>

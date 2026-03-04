@@ -4,25 +4,27 @@ import TacticalCTA from '../ui/TacticalCTA.astro';
 // Otimizado para LCP rápido (above-the-fold) e sem dependências do cliente.
 ---
 
-<section class="w-full py-24 lg:py-32">
+<section class="relative w-full overflow-hidden bg-[var(--color-surface-primary)] py-24 lg:py-32">
+  <!-- Glow Orbital Superior (Ignition Depth)  -->
+  <div class="absolute inset-x-0 -top-[30%] mx-auto h-[600px] w-full max-w-4xl rounded-full bg-[var(--color-surface-tertiary)] opacity-30 blur-[120px] pointer-events-none"></div>
+
   <div
-    class="scroll-reveal mx-auto flex max-w-7xl flex-col items-start px-4 text-left sm:px-6 lg:px-8 md:items-center md:text-center"
+    class="relative scroll-reveal mx-auto flex max-w-7xl flex-col items-start px-4 text-left sm:px-6 lg:px-8 md:items-center md:text-center z-10"
   >
     <header class="flex w-full flex-col items-start md:items-center">
-      <h1 class="text-3xl font-bold tracking-tight text-white/90 sm:text-5xl md:text-6xl lg:text-7xl">
+      <h1 class="text-4xl font-extrabold tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl">
         Pare de Automatizar o Caos
       </h1>
-      <p class="mt-6 max-w-2xl line-clamp-3 text-base leading-relaxed text-white/60 sm:text-xl lg:text-2xl">
-        Engenharia Operacional para eliminar gargalos, padronizar processos e dar visibilidade real da sua
-        operação.
+      <p class="mt-8 max-w-2xl text-base leading-relaxed text-white/60 sm:text-xl md:text-2xl">
+        Engenharia Operacional para eliminar gargalos, padronizar processos e dar visibilidade real da sua operação.
       </p>
     </header>
 
-    <div class="mt-8 w-full md:w-auto">
+    <div class="mt-10 w-full md:w-auto">
       <TacticalCTA text="Agendar Auditoria" ariaLabel="Agendar Auditoria" class="w-full sm:w-auto" />
       <a
         href="#metodo-aptus"
-        class="sr-only focus:not-sr-only focus:mt-3 focus:inline-flex focus:text-sm focus:text-accent"
+        class="sr-only focus:not-sr-only focus:mt-3 focus:inline-flex focus:text-sm focus:text-[var(--color-accent)]"
       >
         Ir para a seção Método Aptus
       </a>

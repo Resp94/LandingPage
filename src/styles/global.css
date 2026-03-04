@@ -38,12 +38,14 @@
 
   /* Cores e tokens dedicados - Atualizados baseados na Logo da Aptus */
   --color-accent: #FC5400;
+  --color-accent-hover: #FC7800;
   --color-grid: color-mix(in srgb, var(--color-surface-secondary) 50%, transparent);
 
   /* Tokens de superfícies — paleta Brand para hierarquia visual (AC#3) */
   --color-surface-primary: #0C0000;
   --color-surface-secondary: #3C0000;
   --color-surface-tertiary: #600000;
+  --color-surface-light: #FFFFFF;
 
   /* Tokens de Espaçamento base do design system */
   --spacing-section-sm: var(--spacing-24);
@@ -52,8 +54,9 @@
 
 @layer base {
   body {
-    /* Fundo principal profundo, texto âmbar suavizado para boa leitura no escuro */
-    @apply bg-[#0C0000] font-sans text-[#FC9C00]/80 antialiased;
+    /* Fundo principal profundo, texto para boa leitura no escuro */
+    @apply bg-[var(--color-surface-primary)] font-sans text-white/80 antialiased leading-relaxed;
+    font-size: 17px;
   }
 
   /* text-[#FFFFFF] para headings para criar destaque com o fundo escuro */
@@ -63,7 +66,7 @@
   h4,
   h5,
   h6 {
-    @apply tracking-tight text-[#FFFFFF];
+    @apply tracking-tight text-white;
   }
 
   h1 {

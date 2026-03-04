@@ -8,22 +8,23 @@ import TacticalCTA from '../ui/TacticalCTA.astro';
 
 <section
   id="auditoria"
-  class="py-24 lg:py-32 scroll-reveal text-center"
+  class="bg-[var(--color-surface-primary)] py-24 text-center lg:py-32"
   aria-labelledby="cta-title"
 >
-  <div class="px-4 mx-auto w-full max-w-4xl">
+  <div class="scroll-reveal mx-auto w-full max-w-4xl px-4">
     <h2
       id="cta-title"
-      class="text-4xl font-bold tracking-tight text-white/90 md:text-5xl"
+      class="text-4xl font-extrabold tracking-tighter text-white md:text-5xl lg:text-6xl"
     >
-      Sua Operação Merece Engenharia, Não Remendos
+      Sua Operação Merece Engenharia, <span class="text-[var(--color-surface-tertiary)]">Não Remendos</span>
     </h2>
 
-    <div class="mt-10 flex justify-center w-full">
-      <TacticalCTA class="w-full sm:w-auto border-accent/70 bg-accent/10 text-accent shadow-lg shadow-accent/10 hover:border-accent hover:bg-accent/20 hover:text-white" />
+    <div class="mt-12 flex w-full justify-center">
+      <!-- O botão usará os mesmos estilos premium já definidos no TacticalCTA -->
+      <TacticalCTA class="w-full shadow-2xl shadow-[var(--color-accent)]/20 sm:w-auto" />
     </div>
 
-    <p class="mt-6 text-white/60">
+    <p class="mt-8 text-lg text-white/60">
       Análise sem compromisso. Sua operação diagnosticada em até 24h úteis.
     </p>
   </div>
