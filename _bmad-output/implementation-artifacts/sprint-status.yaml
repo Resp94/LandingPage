@@ -62,7 +62,7 @@ development_status:
   epic-3: in-progress
   3-1-tacticalcta-component: done
   3-2-diagnosticmodal-overlay-focus-lock: done
-  3-3-typeform-tally-embed-form-integration: backlog
+  3-3-typeform-tally-embed-form-integration: done
   3-4-success-state-post-submission-experience: backlog
   3-5-webhook-integration-crm-pipeline: backlog
   epic-3-retrospective: optional

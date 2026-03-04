@@ -1,6 +1,8 @@
 ---
 // src/components/ui/DiagnosticModal.astro
 
+import FormEmbed from './FormEmbed.astro';
+
 export interface Props {
   title?: string;
   description?: string;
@@ -57,8 +59,8 @@ const {
     </button>
 
     <!-- Content Area for future steps (e.g. Typeform integration) -->
-    <div class="flex-1 rounded-xl border border-zinc-800/50 bg-zinc-900/30 flex items-center justify-center p-8 text-center text-sm text-zinc-500">
-      <p>Formulário será carregado aqui...</p>
+    <div class="flex-1 rounded-xl w-full h-full min-h-[500px] flex items-stretch justify-center p-0 md:p-2">
+      <FormEmbed />
     </div>
   </div>
 </dialog>
@@ -72,6 +74,23 @@ const {
 
     const { setupModalListener } = await import('../../scripts/modal');
     setupModalListener();
+  }
+
+  function scheduleIdleInit() {
+    if (root.dataset.diagnosticModalIdleInitScheduled === 'true') return;
+    root.dataset.diagnosticModalIdleInitScheduled = 'true';
+
+    const runInit = () => {
+      void initModal();
+    };
+    const requestIdle = globalThis.requestIdleCallback;
+
+    if (typeof requestIdle === 'function') {
+      requestIdle(runInit, { timeout: 2000 });
+      return;
+    }
+
+    globalThis.setTimeout(runInit, 1200);
   }
 
   function initWhenVisible() {
@@ -97,6 +116,7 @@ const {
     );
 
     observer.observe(dialog);
+    scheduleIdleInit();
   }
 
   if (root.dataset.diagnosticModalVisibilityBound !== 'true') {
