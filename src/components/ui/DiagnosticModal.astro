@@ -58,15 +58,56 @@ const {
       </svg>
     </button>
 
-    <!-- Content Area for future steps (e.g. Typeform integration) -->
-    <div class="flex-1 rounded-xl w-full h-full min-h-[500px] flex items-stretch justify-center p-0 md:p-2">
-      <FormEmbed />
+    <!-- Content Area for form and success steps -->
+    <div class="flex-1 rounded-xl w-full h-full min-h-[500px] relative p-0 md:p-2 overflow-hidden flex items-stretch justify-center">
+      
+      <div id="form-view" class="absolute inset-0 transition-opacity duration-300 ease-out opacity-100 flex items-stretch justify-center w-full h-full z-10 bg-zinc-950">
+        <FormEmbed />
+      </div>
+
+      <div id="success-view" role="status" aria-live="polite" class="absolute inset-x-0 inset-y-0 transition-opacity duration-300 ease-out opacity-0 hidden flex-col items-center justify-center text-center p-6 sm:p-8 z-20 bg-zinc-950 h-full w-full pointer-events-none">
+        <div class="h-16 w-16 mb-6 rounded-full bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="text-emerald-500"
+            aria-hidden="true"
+          >
+            <path d="M20 6 9 17l-5-5" />
+          </svg>
+        </div>
+        
+        <h3 class="text-2xl font-medium tracking-tight text-zinc-100 title-font mb-3">
+          Analisando seu ecossistema...
+        </h3>
+        
+        <p class="text-base text-zinc-400 max-w-sm mx-auto mb-8">
+          Seu perfil foi enviado ao núcleo de Engenharia Aptus. Tempo de resposta projetado: 24h úteis.
+        </p>
+
+        <button
+          type="button"
+          id="success-close-btn"
+          aria-label="Concluir e fechar"
+          class="px-6 py-3 rounded-lg text-sm font-medium text-zinc-400 bg-transparent hover:bg-zinc-900 hover:text-zinc-100 border border-zinc-700/50 hover:border-zinc-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+        >
+          Fechar
+        </button>
+      </div>
     </div>
   </div>
 </dialog>
 
 <script>
   const root = document.documentElement;
+  const bootstrapOpenDetailKey = '__diagnosticModalBootstrap';
 
   async function initModal() {
     if (root.dataset.diagnosticModalInitDone === 'true') return;
@@ -119,9 +160,39 @@ const {
     scheduleIdleInit();
   }
 
+  function ensureInitOnFirstOpen(event: Event) {
+    const customEvent = event as CustomEvent<Record<string, unknown> | null>;
+    const isBootstrapReplay =
+      customEvent instanceof CustomEvent &&
+      typeof customEvent.detail === 'object' &&
+      customEvent.detail !== null &&
+      customEvent.detail[bootstrapOpenDetailKey] === true;
+
+    if (isBootstrapReplay) return;
+    if (root.dataset.diagnosticModalInitDone === 'true') return;
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    void initModal().then(() => {
+      document.dispatchEvent(
+        new CustomEvent('open-diagnostic', {
+          bubbles: true,
+          cancelable: true,
+          detail: { [bootstrapOpenDetailKey]: true },
+        })
+      );
+    });
+  }
+
   if (root.dataset.diagnosticModalVisibilityBound !== 'true') {
     root.dataset.diagnosticModalVisibilityBound = 'true';
     initWhenVisible();
     document.addEventListener('astro:page-load', initWhenVisible);
+  }
+
+  if (root.dataset.diagnosticModalOpenBootstrapBound !== 'true') {
+    root.dataset.diagnosticModalOpenBootstrapBound = 'true';
+    document.addEventListener('open-diagnostic', ensureInitOnFirstOpen, { capture: true });
   }
 </script>
