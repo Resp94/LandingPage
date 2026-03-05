@@ -1,6 +1,6 @@
 # Story 1.6: Dynamic Global Settings (Supabase Integration)
 
-Status: ready-for-dev
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -22,15 +22,15 @@ so that **the operational team can easily update these settings without touching
 
 ## Tasks / Subtasks
 
-- [ ] Task 1: Setup Supabase Integration
-  - [ ] Configure `PUBLIC_SUPABASE_URL` and `PUBLIC_SUPABASE_ANON_KEY` in `.env` and `.env.example`
-  - [ ] Create a utility/service to fetch settings and handle the fallback mechanism clearly (`src/lib/settings.ts` or `src/lib/supabase.ts`).
-- [ ] Task 2: Implement Component Updates
-  - [ ] Update `Footer.astro` to consume dynamic settings.
-  - [ ] Update `Header.astro` to consume dynamic settings (if any apply).
-  - [ ] Update `privacidade.astro` to consume the dynamic contact email.
-- [ ] Task 3: Fail-safe Testing
-  - [ ] Simulate a database failure and assert that the preset default static values render perfectly.
+- [x] Task 1: Setup Supabase Integration
+  - [x] Configure `PUBLIC_SUPABASE_URL` and `PUBLIC_SUPABASE_ANON_KEY` in `.env` and `.env.example`
+  - [x] Create a utility/service to fetch settings and handle the fallback mechanism clearly (`src/lib/settings.ts` or `src/lib/supabase.ts`).
+- [x] Task 2: Implement Component Updates
+  - [x] Update `Footer.astro` to consume dynamic settings.
+  - [x] Update `Header.astro` to consume dynamic settings (if any apply).
+  - [x] Update `privacidade.astro` to consume the dynamic contact email.
+- [x] Task 3: Fail-safe Testing
+  - [x] Simulate a database failure and assert that the preset default static values render perfectly.
 
 ## Dev Notes
 
