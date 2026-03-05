@@ -6,8 +6,8 @@
  * enable IntersectionObserver-based entrance animations for any element
  * with the `.scroll-reveal` class.
  *
- * ARCHITECTURAL NOTE (AC #2, AC #8 — client:visible):
- * Astro's `client:visible` directive only works with UI framework components
+ * ARCHITECTURAL NOTE (AC #2, AC #8):
+ * Astro's client directives only work with UI framework components
  * (React, Svelte, Vue, etc.), NOT with native `.astro` components. Pure Astro
  * `<script>` tags are bundled and loaded eagerly by Vite at build time.
  *
@@ -16,8 +16,8 @@
  * observers that only fire when elements enter the viewport. The script itself
  * is ~1KB and has negligible impact on initial load performance.
  *
- * If strict `client:visible` hydration is ever required, this component must
- * be rewritten as a framework island (e.g. Preact + `client:visible`).
+ * If strict hydration is ever required, this component must
+ * be rewritten as a framework island.
  */
 interface Props {
   /** Optional class to allow use as a wrapper if desired */
@@ -36,4 +36,6 @@ const hasSlotContext = Astro.slots.has('default');
   </div>
 ) : null}
 
-<script src="../../scripts/scrollReveal.ts"></script>
+<script>
+  import "../../scripts/scrollReveal.ts";
+</script>

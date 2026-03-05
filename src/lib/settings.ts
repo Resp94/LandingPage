@@ -15,7 +15,8 @@ const DEFAULT_SETTINGS: GlobalSettings = {
   instagram_url: 'https://instagram.com/aptus.tech',
 };
 
-const CACHE_TTL_MS = 60_000;
+// Global settings must reflect Supabase edits immediately, without waiting for process-level cache expiry.
+const CACHE_TTL_MS = 0;
 let cachedSettings: GlobalSettings | null = null;
 let cacheExpiresAt = 0;
 let inFlightSettingsPromise: Promise<GlobalSettings> | null = null;
@@ -26,16 +27,48 @@ type GlobalSettingRow = {
   value?: string | null;
 };
 
+const SOCIAL_URL_KEYS = new Set(['instagram_url', 'linkedin_url']);
+
+function normalizeExternalUrl(value: string): string {
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return '';
+  }
+
+  if (/^https?:\/\//i.test(trimmed)) {
+    return trimmed;
+  }
+
+  if (trimmed.startsWith('//')) {
+    return `https:${trimmed}`;
+  }
+
+  return `https://${trimmed}`;
+}
+
+function sanitizeSettingValue(settingKey: string, rawValue: string): string {
+  const trimmedValue = rawValue.trim();
+  if (!trimmedValue) {
+    return '';
+  }
+
+  if (SOCIAL_URL_KEYS.has(settingKey)) {
+    return normalizeExternalUrl(trimmedValue);
+  }
+
+  return trimmedValue;
+}
+
 function buildSettings(rows: GlobalSettingRow[]): GlobalSettings {
   const loadedSettings = rows.reduce(
     (acc, row) => {
-      const settingKey = row.key ?? row.id;
+      const settingKey = (row.key ?? row.id)?.trim();
       if (
         typeof settingKey === 'string' &&
         settingKey.length > 0 &&
         typeof row.value === 'string'
       ) {
-        acc[settingKey] = row.value;
+        acc[settingKey] = sanitizeSettingValue(settingKey, row.value);
       }
       return acc;
     },
@@ -72,7 +105,7 @@ async function fetchSettingsRows(
 }
 
 export async function getGlobalSettings(): Promise<GlobalSettings> {
-  if (cachedSettings && Date.now() < cacheExpiresAt) {
+  if (CACHE_TTL_MS > 0 && cachedSettings && Date.now() < cacheExpiresAt) {
     return cachedSettings;
   }
 

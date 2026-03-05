@@ -1,0 +1,420 @@
+
+> landing-page@0.0.1 dev
+> astro dev --port 5435
+
+[2m13:43:08[22m [34m[@astrojs/cloudflare][39m Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
+[2m13:43:08[22m [34m[@astrojs/cloudflare][39m If you see the error "Invalid binding `SESSION`" in your build output, you need to add the binding to your wrangler config file.
+[33m[1m13:43:08[22m [WARN] [adapter][39m Cloudflare does not support sharp at runtime. However, you can configure `imageService: "compile"` to optimize images with sharp on prerendered pages during build time.
+[2m13:43:09[22m [34m[types][39m Generated [2m4ms[22m
+[2m13:43:09[22m [34m[content][39m Syncing content
+[2m13:43:09[22m [34m[content][39m Synced content
+[2m13:43:09[22m [34m[vite][39m Port 5435 is in use, trying another one...
+
+[42m[1m astro [22m[49m [32mv5.18.0[39m [2mready in[22m 3422 [2mms[22m
+
+[2m┃[22m Local    [36mhttp://localhost:5436/[39m
+[2m┃[22m Network  [2muse --host to expose[22m
+
+[2m13:43:09[22m [32mwatching for file changes...[39m
+Supabase environment variables are missing. Using default settings.
+[2m13:44:00[22m [34m[200][39m / [2m1023ms[22m
+[2m13:44:03[22m [34m[watch][39m temp_output.txt
+[2m13:44:03[22m [34m[watch][39m temp_output.txt
+[2m13:44:03[22m [34m[watch][39m temp_output.txt
+[2m13:44:03[22m [34m[watch][39m temp_output.txt
+[2m13:44:04[22m [34m[watch][39m temp_output.txt
+[2m13:44:04[22m [34m[watch][39m temp_output.txt
+[2m13:44:04[22m [34m[watch][39m temp_output.txt
+[2m13:44:04[22m [34m[watch][39m temp_output.txt
+[2m13:44:05[22m [34m[watch][39m temp_output.txt
+[2m13:44:05[22m [34m[watch][39m temp_output.txt
+[2m13:44:05[22m [34m[watch][39m temp_output.txt
+[2m13:44:05[22m [34m[watch][39m temp_output.txt
+[2m13:44:05[22m [34m[watch][39m temp_output.txt
+[2m13:44:05[22m [34m[watch][39m temp_output.txt
+[2m13:44:06[22m [34m[watch][39m temp_output.txt
+[2m13:44:06[22m [34m[watch][39m temp_output.txt
+[2m13:44:06[22m [34m[watch][39m temp_output.txt
+[2m13:44:06[22m [34m[watch][39m temp_output.txt
+[2m13:44:10[22m [34m[watch][39m temp_output.txt
+[2m13:44:10[22m [34m[watch][39m temp_output.txt
+[2m13:44:12[22m [34m[watch][39m temp_output.txt
+[2m13:44:12[22m [34m[watch][39m temp_output.txt
+[2m13:44:13[22m [34m[watch][39m temp_output.txt
+[2m13:44:13[22m [34m[watch][39m temp_output.txt
+[2m13:44:13[22m [34m[watch][39m temp_output.txt
+[2m13:44:13[22m [34m[watch][39m temp_output.txt
+[2m13:44:13[22m [34m[watch][39m temp_output.txt
+[2m13:44:13[22m [34m[watch][39m temp_output.txt
+[2m13:44:13[22m [34m[watch][39m temp_output.txt
+[2m13:44:13[22m [34m[watch][39m temp_output.txt
+[2m13:44:18[22m [34m[watch][39m temp_output.txt
+[2m13:44:18[22m [34m[watch][39m temp_output.txt
+[2m13:44:19[22m [34m[watch][39m temp_output.txt
+[2m13:44:19[22m [34m[watch][39m temp_output.txt
+[2m13:44:22[22m [34m[watch][39m temp_output.txt
+[2m13:44:22[22m [34m[watch][39m temp_output.txt
+[2m13:44:23[22m [34m[200][39m / [2m11728ms[22m
+[2m13:44:23[22m [34m[200][39m / [2m11732ms[22m
+[2m13:44:23[22m [34m[200][39m / [2m11738ms[22m
+[2m13:44:23[22m [34m[200][39m / [2m11742ms[22m
+[2m13:44:23[22m [34m[200][39m / [2m11743ms[22m
+[2m13:44:23[22m [34m[200][39m / [2m11743ms[22m
+[2m13:44:23[22m [34m[200][39m / [2m11744ms[22m
+[2m13:44:23[22m [34m[watch][39m temp_output.txt
+[2m13:44:23[22m [34m[watch][39m temp_output.txt
+[2m13:44:23[22m [34m[watch][39m temp_output.txt
+[2m13:44:23[22m [34m[watch][39m temp_output.txt
+[2m13:44:24[22m [34m[watch][39m temp_output.txt
+[2m13:44:24[22m [34m[watch][39m temp_output.txt
+[2m13:44:24[22m [34m[watch][39m temp_output.txt
+[2m13:44:24[22m [34m[watch][39m temp_output.txt
+[2m13:44:24[22m [34m[watch][39m temp_output.txt
+[2m13:44:24[22m [34m[watch][39m temp_output.txt
+[2m13:44:28[22m [34m[watch][39m temp_output.txt
+[2m13:44:28[22m [34m[watch][39m temp_output.txt
+[2m13:44:28[22m [34m[watch][39m temp_output.txt
+[2m13:44:28[22m [34m[watch][39m temp_output.txt
+[2m13:44:29[22m [34m[watch][39m temp_output.txt
+[2m13:44:29[22m [34m[watch][39m temp_output.txt
+[2m13:44:31[22m [34m[200][39m / [2m8522ms[22m
+[2m13:44:31[22m [34m[200][39m / [2m8527ms[22m
+[2m13:44:32[22m [34m[watch][39m temp_output.txt
+[2m13:44:32[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m13:50:12[22m [34m[200][39m /privacidade [2m315ms[22m
+[2m13:50:23[22m [34m[200][39m / [2m8ms[22m
+[2m13:53:56[22m [34m[watch][39m temp_output.txt
+[2m13:53:56[22m [34m[watch][39m temp_output.txt
+[2m13:53:56[22m [34m[watch][39m temp_output.txt
+[2m13:53:56[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m13:53:57[22m [34m[200][39m / [2m626ms[22m
+[2m13:53:58[22m [34m[watch][39m temp_output.txt
+[2m13:53:58[22m [34m[watch][39m temp_output.txt
+[2m13:53:58[22m [34m[watch][39m temp_output.txt
+[2m13:53:58[22m [34m[watch][39m temp_output.txt
+[2m14:01:14[22m [34m[watch][39m src/lib/settings.ts
+[2m14:01:14[22m [34m[watch][39m src/lib/settings.ts
+[2m14:01:14[22m [34m[watch][39m src/lib/settings.ts
+[2m14:01:14[22m [34m[watch][39m src/lib/settings.ts
+[2m14:01:16[22m [34m[watch][39m temp_output.txt
+[2m14:01:16[22m [34m[watch][39m temp_output.txt
+[2m14:01:16[22m [34m[watch][39m temp_output.txt
+[2m14:01:16[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+Supabase environment variables are missing. Using default settings.
+[2m14:01:17[22m [34m[200][39m / [2m309ms[22m
+[2m14:01:17[22m [34m[200][39m / [2m312ms[22m
+[2m14:01:17[22m [34m[watch][39m temp_output.txt
+[2m14:01:17[22m [34m[watch][39m temp_output.txt
+[2m14:01:17[22m [34m[watch][39m temp_output.txt
+[2m14:01:17[22m [34m[watch][39m temp_output.txt
+[2m14:01:17[22m [34m[watch][39m temp_output.txt
+[2m14:01:17[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:01:19[22m [34m[200][39m / [2m357ms[22m
+[2m14:01:20[22m [34m[watch][39m temp_output.txt
+[2m14:01:20[22m [34m[watch][39m temp_output.txt
+[2m14:01:20[22m [34m[watch][39m temp_output.txt
+[2m14:01:20[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:01:21[22m [34m[200][39m / [2m338ms[22m
+[2m14:01:21[22m [34m[watch][39m temp_output.txt
+[2m14:01:21[22m [34m[watch][39m temp_output.txt
+[2m14:01:22[22m [34m[watch][39m temp_output.txt
+[2m14:01:22[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:01:23[22m [34m[200][39m / [2m364ms[22m
+[2m14:01:23[22m [34m[watch][39m temp_output.txt
+[2m14:01:23[22m [34m[watch][39m temp_output.txt
+[2m14:02:03[22m [34m[watch][39m src/pages/index.astro
+[2m14:02:03[22m [34m[watch][39m src/pages/index.astro
+[2m14:02:04[22m [34m[watch][39m temp_output.txt
+[2m14:02:04[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:04[22m [34m[200][39m / [2m553ms[22m
+Supabase environment variables are missing. Using default settings.
+[2m14:02:04[22m [34m[200][39m / [2m4ms[22m
+[2m14:02:04[22m [34m[watch][39m temp_output.txt
+[2m14:02:04[22m [34m[watch][39m temp_output.txt
+[2m14:02:08[22m [34m[watch][39m src/pages/privacidade.astro
+[2m14:02:08[22m [34m[watch][39m src/pages/privacidade.astro
+[2m14:02:09[22m [34m[watch][39m temp_output.txt
+[2m14:02:09[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:09[22m [34m[200][39m / [2m243ms[22m
+[2m14:02:09[22m [34m[watch][39m temp_output.txt
+[2m14:02:09[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:10[22m [34m[200][39m / [2m203ms[22m
+[2m14:02:10[22m [34m[watch][39m temp_output.txt
+[2m14:02:10[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:10[22m [34m[200][39m / [2m176ms[22m
+[2m14:02:10[22m [34m[watch][39m temp_output.txt
+[2m14:02:10[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:10[22m [34m[200][39m / [2m211ms[22m
+[2m14:02:11[22m [34m[watch][39m temp_output.txt
+[2m14:02:11[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:11[22m [34m[200][39m / [2m207ms[22m
+[2m14:02:11[22m [34m[watch][39m temp_output.txt
+[2m14:02:11[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:11[22m [34m[200][39m / [2m203ms[22m
+[2m14:02:11[22m [34m[watch][39m temp_output.txt
+[2m14:02:11[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:12[22m [34m[200][39m / [2m192ms[22m
+[2m14:02:12[22m [34m[watch][39m temp_output.txt
+[2m14:02:12[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:12[22m [34m[200][39m / [2m176ms[22m
+[2m14:02:12[22m [34m[watch][39m temp_output.txt
+[2m14:02:12[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:13[22m [34m[200][39m / [2m482ms[22m
+[2m14:02:13[22m [34m[watch][39m temp_output.txt
+[2m14:02:13[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:13[22m [34m[200][39m / [2m181ms[22m
+[2m14:02:13[22m [34m[watch][39m temp_output.txt
+[2m14:02:13[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:13[22m [34m[200][39m / [2m196ms[22m
+[2m14:02:14[22m [34m[watch][39m temp_output.txt
+[2m14:02:14[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:14[22m [34m[200][39m / [2m209ms[22m
+[2m14:02:14[22m [34m[watch][39m temp_output.txt
+[2m14:02:14[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:14[22m [34m[200][39m / [2m198ms[22m
+[2m14:02:14[22m [34m[watch][39m temp_output.txt
+[2m14:02:14[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:15[22m [34m[200][39m / [2m189ms[22m
+[2m14:02:15[22m [34m[watch][39m temp_output.txt
+[2m14:02:15[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:15[22m [34m[200][39m / [2m189ms[22m
+[2m14:02:15[22m [34m[watch][39m temp_output.txt
+[2m14:02:15[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:15[22m [34m[200][39m / [2m191ms[22m
+[2m14:02:16[22m [34m[watch][39m temp_output.txt
+[2m14:02:16[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:16[22m [34m[200][39m / [2m250ms[22m
+[2m14:02:16[22m [34m[watch][39m temp_output.txt
+[2m14:02:16[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:17[22m [34m[200][39m / [2m325ms[22m
+[2m14:02:17[22m [34m[watch][39m temp_output.txt
+[2m14:02:17[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:17[22m [34m[200][39m / [2m296ms[22m
+[2m14:02:17[22m [34m[watch][39m temp_output.txt
+[2m14:02:17[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:18[22m [34m[200][39m / [2m266ms[22m
+[2m14:02:18[22m [34m[watch][39m temp_output.txt
+[2m14:02:18[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:18[22m [34m[200][39m / [2m217ms[22m
+[2m14:02:18[22m [34m[watch][39m temp_output.txt
+[2m14:02:18[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:19[22m [34m[200][39m / [2m272ms[22m
+[2m14:02:19[22m [34m[watch][39m temp_output.txt
+[2m14:02:19[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:19[22m [34m[200][39m / [2m232ms[22m
+[2m14:02:19[22m [34m[watch][39m temp_output.txt
+[2m14:02:19[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:19[22m [34m[200][39m / [2m191ms[22m
+[2m14:02:20[22m [34m[watch][39m temp_output.txt
+[2m14:02:20[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:20[22m [34m[200][39m / [2m216ms[22m
+[2m14:02:20[22m [34m[watch][39m temp_output.txt
+[2m14:02:20[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:20[22m [34m[200][39m / [2m202ms[22m
+[2m14:02:20[22m [34m[watch][39m temp_output.txt
+[2m14:02:20[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:21[22m [34m[200][39m / [2m250ms[22m
+[2m14:02:21[22m [34m[watch][39m temp_output.txt
+[2m14:02:21[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:21[22m [34m[200][39m / [2m186ms[22m
+[2m14:02:21[22m [34m[watch][39m temp_output.txt
+[2m14:02:21[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:22[22m [34m[200][39m / [2m196ms[22m
+[2m14:02:22[22m [34m[watch][39m temp_output.txt
+[2m14:02:22[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:22[22m [34m[200][39m / [2m188ms[22m
+[2m14:02:22[22m [34m[watch][39m temp_output.txt
+[2m14:02:22[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:22[22m [34m[200][39m / [2m184ms[22m
+[2m14:02:22[22m [34m[watch][39m temp_output.txt
+[2m14:02:22[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:23[22m [34m[200][39m / [2m218ms[22m
+[2m14:02:23[22m [34m[watch][39m temp_output.txt
+[2m14:02:23[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:23[22m [34m[200][39m / [2m221ms[22m
+[2m14:02:23[22m [34m[watch][39m temp_output.txt
+[2m14:02:23[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:24[22m [34m[200][39m / [2m224ms[22m
+[2m14:02:24[22m [34m[watch][39m temp_output.txt
+[2m14:02:24[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:24[22m [34m[200][39m / [2m187ms[22m
+[2m14:02:24[22m [34m[watch][39m temp_output.txt
+[2m14:02:24[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:25[22m [34m[200][39m / [2m306ms[22m
+[2m14:02:25[22m [34m[watch][39m temp_output.txt
+[2m14:02:25[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:25[22m [34m[200][39m / [2m252ms[22m
+[2m14:02:25[22m [34m[watch][39m temp_output.txt
+[2m14:02:25[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:26[22m [34m[200][39m / [2m215ms[22m
+[2m14:02:26[22m [34m[watch][39m temp_output.txt
+[2m14:02:26[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:26[22m [34m[200][39m / [2m216ms[22m
+[2m14:02:26[22m [34m[watch][39m temp_output.txt
+[2m14:02:26[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:26[22m [34m[200][39m / [2m201ms[22m
+[2m14:02:27[22m [34m[watch][39m temp_output.txt
+[2m14:02:27[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:27[22m [34m[200][39m / [2m205ms[22m
+[2m14:02:27[22m [34m[watch][39m temp_output.txt
+[2m14:02:27[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:27[22m [34m[200][39m / [2m224ms[22m
+[2m14:02:27[22m [34m[watch][39m temp_output.txt
+[2m14:02:27[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:28[22m [34m[200][39m / [2m194ms[22m
+[2m14:02:28[22m [34m[watch][39m temp_output.txt
+[2m14:02:28[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:28[22m [34m[200][39m / [2m193ms[22m
+[2m14:02:28[22m [34m[watch][39m temp_output.txt
+[2m14:02:28[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:29[22m [34m[200][39m / [2m210ms[22m
+[2m14:02:29[22m [34m[watch][39m temp_output.txt
+[2m14:02:29[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:29[22m [34m[200][39m / [2m190ms[22m
+[2m14:02:29[22m [34m[watch][39m temp_output.txt
+[2m14:02:29[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:29[22m [34m[200][39m / [2m208ms[22m
+[2m14:02:29[22m [34m[watch][39m temp_output.txt
+[2m14:02:29[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:30[22m [34m[200][39m / [2m196ms[22m
+[2m14:02:30[22m [34m[watch][39m temp_output.txt
+[2m14:02:30[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:30[22m [34m[200][39m / [2m192ms[22m
+[2m14:02:30[22m [34m[watch][39m temp_output.txt
+[2m14:02:30[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:30[22m [34m[200][39m / [2m212ms[22m
+[2m14:02:31[22m [34m[watch][39m temp_output.txt
+[2m14:02:31[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:31[22m [34m[200][39m / [2m205ms[22m
+[2m14:02:31[22m [34m[watch][39m temp_output.txt
+[2m14:02:31[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:31[22m [34m[200][39m / [2m191ms[22m
+[2m14:02:31[22m [34m[watch][39m temp_output.txt
+[2m14:02:31[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:32[22m [34m[200][39m / [2m203ms[22m
+[2m14:02:32[22m [34m[watch][39m temp_output.txt
+[2m14:02:32[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:32[22m [34m[200][39m / [2m195ms[22m
+[2m14:02:32[22m [34m[watch][39m temp_output.txt
+[2m14:02:32[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:32[22m [34m[200][39m / [2m188ms[22m
+[2m14:02:33[22m [34m[watch][39m temp_output.txt
+[2m14:02:33[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:33[22m [34m[200][39m / [2m198ms[22m
+[2m14:02:33[22m [34m[watch][39m temp_output.txt
+[2m14:02:33[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:33[22m [34m[200][39m / [2m190ms[22m
+[2m14:02:33[22m [34m[watch][39m temp_output.txt
+[2m14:02:33[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:34[22m [34m[200][39m / [2m191ms[22m
+[2m14:02:34[22m [34m[watch][39m temp_output.txt
+[2m14:02:34[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:34[22m [34m[200][39m / [2m208ms[22m
+[2m14:02:34[22m [34m[watch][39m temp_output.txt
+[2m14:02:34[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:34[22m [34m[200][39m / [2m218ms[22m
+[2m14:02:35[22m [34m[watch][39m temp_output.txt
+[2m14:02:35[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:35[22m [34m[200][39m / [2m205ms[22m
+[2m14:02:35[22m [34m[watch][39m temp_output.txt
+[2m14:02:35[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:35[22m [34m[200][39m / [2m225ms[22m
+[2m14:02:35[22m [34m[watch][39m temp_output.txt
+[2m14:02:35[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:36[22m [34m[200][39m / [2m209ms[22m
+[2m14:02:36[22m [34m[watch][39m temp_output.txt
+[2m14:02:36[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:36[22m [34m[200][39m / [2m317ms[22m
+[2m14:02:37[22m [34m[watch][39m temp_output.txt
+[2m14:02:37[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:02:37[22m [34m[200][39m / [2m425ms[22m
+[2m14:02:37[22m [34m[watch][39m temp_output.txt
+[2m14:02:37[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+Supabase environment variables are missing. Using default settings.
+[2m14:02:38[22m [34m[200][39m / [2m273ms[22m
+[2m14:02:38[22m [34m[200][39m / [2m273ms[22m
+[2m14:02:38[22m [34m[watch][39m temp_output.txt
+[2m14:02:38[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:05:43[22m [34m[200][39m / [2m495ms[22m
+[2m14:05:44[22m [34m[watch][39m temp_output.txt
+[2m14:05:44[22m [34m[watch][39m temp_output.txt
+[2m14:05:44[22m [34m[watch][39m temp_output.txt
+[2m14:05:44[22m [34m[watch][39m temp_output.txt
+Supabase environment variables are missing. Using default settings.
+[2m14:05:44[22m [34m[200][39m / [2m270ms[22m
+[2m14:05:45[22m [34m[watch][39m temp_output.txt
+[2m14:05:45[22m [34m[watch][39m temp_output.txt
