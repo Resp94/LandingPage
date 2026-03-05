@@ -418,3 +418,11 @@ Supabase environment variables are missing. Using default settings.
 [2m14:05:44[22m [34m[200][39m / [2m270ms[22m
 [2m14:05:45[22m [34m[watch][39m temp_output.txt
 [2m14:05:45[22m [34m[watch][39m temp_output.txt
+[2m14:14:45[22m [34m[watch][39m src/lib/supabase.ts
+[2m14:14:45[22m [34m[watch][39m src/lib/supabase.ts
+[2m14:15:08[22m [34m[watch][39m src/env.d.ts
+[2m14:15:08[22m [34m[watch][39m src/env.d.ts
+[2m14:16:03[22m [34m[watch][39m .env.example
+[2m14:16:03[22m [34m[watch][39m .env.example
+[2m14:16:03[22m [34m[watch][39m temp_output.txt
+[2m14:16:03[22m [34m[watch][39m temp_output.txt
