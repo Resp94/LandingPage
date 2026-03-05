@@ -180,10 +180,10 @@ public/
 
 ### Data Architecture
 
-**Decision: Supabase Database Integration for MVP (Global Settings)**
-- Rationale: A página requer consumo dinâmico das informações institucionais (E-mails de contato/privacidade e Links de Redes Sociais - Instagram/LinkedIn) que devem ser de fácil manuseio sem necessidades de novo deploy no código.
-- Schema Addition (MVP): Criação da tabela `global_settings` no Supabase para armazenar configurações de contato no formato chave-valor ou colunas específicas.
-- Fetch Strategy: O Astro realizará o fetch desses dados no carregamento da página (Server-Side Rendering - SSR - via adapter da Cloudflare ou chamada async direta no front) para popular dinamicamente os componentes (como o `Footer.astro` e links de contato).
+**Decision: No Database no MVP — Supabase Schema Designed for Phase 2**
+- Rationale: MVP é uma landing page estática. O fluxo de dados é Typeform → webhook → n8n → CRM. Zero necessidade de banco no frontend.
+- Phase 2: Supabase (PostgreSQL managed) será introduzido para analytics de leads, estudos de caso e calculadoras ROI.
+- Schema design seguindo Supabase/Postgres best practices desde agora:
 
 ```sql
 -- Schema planejado para Phase 2 (Supabase)
@@ -212,12 +212,6 @@ create index leads_qualified_idx on leads (qualified) where qualified = true;
 
 -- RLS for future multi-tenant support
 alter table leads enable row level security;
-
--- Adição para MVP: Configurações Globais
-create table global_settings (
-  id text primary key,
-  value text not null
-);
 ```
 
 - Connection pooling via PgBouncer (Supabase built-in) em transaction mode

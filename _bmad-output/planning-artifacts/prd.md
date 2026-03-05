@@ -134,6 +134,9 @@ A estratégia do MVP atua como um "Lead Qualification Engine". O esforço foca n
 - **FR8:** O Frontend do formulário pode disparar Webhooks seguros comunicando um arquivo/payload de conversão ao Endpoint n8n.
 - **FR9:** O Sistema Backend pode injetar as informações pré-estruturadas como um cliente "quente" viável nos repositórios (Notion/Trello) da equipe comercial da Aptus.
 
+### Conteúdo Institucional Dinâmico (Global Settings)
+- **FR10:** O visitante deve visualizar os links de redes sociais (Instagram, LinkedIn) e e-mails de contato na página carregados dinamicamente a partir da base de dados (CMS/Supabase).
+
 ## Non-Functional Requirements (NFR)
 
 ### Performance & Technical Capabilities

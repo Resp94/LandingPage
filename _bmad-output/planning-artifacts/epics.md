@@ -102,8 +102,9 @@ NFR8: Todos blocos contrastantes renderizados textuais (Títulos/Textos longos) 
 | FR7 | Epic 3 | Feedback visual (Success State no DiagnosticModal) |
 | FR8 | Epic 3 | Webhook seguro Typeform → n8n |
 | FR9 | Epic 3 | Injeção CRM via n8n pipeline |
+| FR10| Epic 1 | Renderização dinâmica de Settings via Supabase |
 
-**Coverage: 9/9 FRs mapped (100%)** ✅
+**Coverage: 10/10 FRs mapped (100%)** ✅
 
 ## Epic List
 
@@ -187,9 +188,25 @@ So that **the page loads fast, appears premium in search results, and provides i
 
 **Given** `Footer.astro` is created
 **When** the visitor scrolls to the bottom
-**Then** the footer displays: link to `/privacidade`, contact information, and social media links
+**Then** the footer displays social media links and contact information fetched dynamically via the Global Settings implementation (Story 1.6)
 **And** the footer uses `text-zinc-500` subdued styling with `border-t border-zinc-800/50` separator
 **And** all links have proper `aria-label` attributes and `focus-visible:ring-2 focus-visible:ring-emerald-500`
+
+### Story 1.6: Dynamic Global Settings (Supabase Integration)
+
+As a **developer**,
+I want **to integrate Supabase to fetch global settings (social links, contact emails)**,
+So that **the operational team can easily update these settings without touching the codebase or requiring a new deployment**.
+
+**Acceptance Criteria:**
+
+**Given** the initialized Astro project and Supabase project setup
+**When** the page renders (Server-Side or via client fetch on load)
+**Then** it establishes a connection to the `global_settings` table in Supabase
+**And** retrieves the values for key-value pairs (e.g., `instagram_url`, `linkedin_url`, `contact_email`, `privacy_email`)
+**And** populates the `Footer.astro`, `Header.astro`, and any other component requiring contact/social information with the retrieved data
+**And** if the database fetch fails, it gracefully falls back to a set of predefined default values (fail-safe)
+**And** environment variables (`PUBLIC_SUPABASE_URL`, `PUBLIC_SUPABASE_ANON_KEY`) are properly configured locally and in Cloudflare
 
 ### Story 1.4: ScrollReveal Component & Animations
 
