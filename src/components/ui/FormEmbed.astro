@@ -1,6 +1,8 @@
 ---
 // src/components/ui/FormEmbed.astro
+import { getGlobalSettings } from '../../lib/settings';
 
+const settings = await getGlobalSettings();
 const formId = import.meta.env.TYPEFORM_FORM_ID || '';
 ---
 
@@ -17,8 +19,8 @@ const formId = import.meta.env.TYPEFORM_FORM_ID || '';
   <noscript>
     <div class="absolute inset-0 z-20 flex flex-col items-center justify-center p-8 text-center text-sm text-white/60 bg-surface-primary">
       <p class="mb-4 text-rose-400/80 font-medium">JavaScript bloqueado ou indisponível.</p>
-      <a href="mailto:contato@aptus.com" class="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-accent/10 px-4 py-2 text-sm font-medium text-accent hover:bg-accent/20 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent shadow-[0_0_15px_rgba(252,84,0,0.1)]">
-        Entre em contato: contato@aptus.com
+      <a href={`mailto:${settings.contact_email}`} class="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-accent/10 px-4 py-2 text-sm font-medium text-accent hover:bg-accent/20 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent shadow-[0_0_15px_rgba(252,84,0,0.1)]">
+        Entre em contato: {settings.contact_email}
       </a>
     </div>
   </noscript>
@@ -27,8 +29,8 @@ const formId = import.meta.env.TYPEFORM_FORM_ID || '';
   <div class="form-fallback-cta hidden absolute inset-0 z-20 flex-col items-center justify-center p-8 text-center text-sm text-white/60 bg-surface-primary">
     <p class="mb-4 text-rose-400/80 font-medium">Não foi possível carregar o formulário interativo.</p>
     <p class="mb-6">Você pode utilizar nosso canal alternativo de contato.</p>
-    <a href="mailto:contato@aptus.com" class="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-accent/10 px-4 py-2 text-sm font-medium text-accent hover:bg-accent/20 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent shadow-[0_0_15px_rgba(252,84,0,0.1)]">
-      Entre em contato: contato@aptus.com
+    <a href={`mailto:${settings.contact_email}`} class="inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-accent/10 px-4 py-2 text-sm font-medium text-accent hover:bg-accent/20 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent shadow-[0_0_15px_rgba(252,84,0,0.1)]">
+      Entre em contato: {settings.contact_email}
     </a>
   </div>
 

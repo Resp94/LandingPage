@@ -1,6 +1,9 @@
 ---
 // src/pages/privacidade.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getGlobalSettings } from '../lib/settings';
+
+const settings = await getGlobalSettings();
 ---
 
 <BaseLayout 
@@ -79,9 +82,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           direitos ou tenha qualquer dúvida sobre esta política, por favor, entre em contato através 
           do e-mail: 
           <a  
-            href="mailto:privacidade@aptus.com" 
+            href={`mailto:${settings.privacy_email}`} 
             class="font-medium font-semibold text-accent hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface-primary transition-colors rounded-sm"
-          >privacidade@aptus.com</a>.
+          >{settings.privacy_email}</a>.
         </p>
       </section>
       
@@ -96,3 +99,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </div>
 </BaseLayout>
+

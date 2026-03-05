@@ -37,15 +37,15 @@
     'Courier New', monospace;
 
   /* Cores e tokens dedicados - Atualizados baseados na Logo da Aptus */
-  --color-accent: #FC5400;
-  --color-accent-hover: #FC7800;
+  --color-accent: #fc5400;
+  --color-accent-hover: #fc7800;
   --color-grid: color-mix(in srgb, var(--color-surface-secondary) 50%, transparent);
 
   /* Tokens de superfícies — paleta Brand para hierarquia visual (AC#3) */
-  --color-surface-primary: #0C0000;
-  --color-surface-secondary: #3C0000;
+  --color-surface-primary: #0c0000;
+  --color-surface-secondary: #3c0000;
   --color-surface-tertiary: #600000;
-  --color-surface-light: #FFFFFF;
+  --color-surface-light: #ffffff;
 
   /* Tokens de Espaçamento base do design system */
   --spacing-section-sm: var(--spacing-24);
@@ -55,7 +55,7 @@
 @layer base {
   body {
     /* Fundo principal profundo, texto para boa leitura no escuro */
-    @apply bg-[var(--color-surface-primary)] font-sans text-white/80 antialiased leading-relaxed;
+    @apply bg-[var(--color-surface-primary)] font-sans leading-relaxed text-white/80 antialiased;
     font-size: 17px;
   }
 
@@ -92,13 +92,10 @@
 }
 
 @layer utilities {
-
   /* Estabelecido para as linhas do "grid de engenharia" */
   .border-grid {
     @apply border-[#3C0000]/50;
   }
-
-
 
   /* ============================================================
      * Scroll Reveal Utilities
