@@ -1,4 +1,4 @@
-# generated: 2026-03-06T11:12:14-04:00
+# generated: 2026-03-06T13:10:00-04:00
 # project: LandingPage
 # project_key: NOKEY
 # tracking_system: file-system
@@ -12,11 +12,12 @@
 #   - done: All stories in epic completed
 #
 # Epic Status Transitions:
-#   - backlog → in-progress: Automatically when first story is created (via create-story)
-#   - in-progress → done: Manually when all stories reach 'done' status
+#   - backlog -> in-progress: Automatically when first story is created (via create-story)
+#   - in-progress -> done: Manually when all stories reach 'done' status
 #
 # Story Status:
 #   - backlog: Story only exists in epic file
+#   - todo: Story priorizada para inicio imediato na sprint atual
 #   - ready-for-dev: Story file created in stories folder
 #   - in-progress: Developer actively working on implementation
 #   - review: Ready for code review (via Dev's code-review workflow)
@@ -33,11 +34,15 @@
 # - SM typically creates next story after previous one is 'done' to incorporate learnings
 # - Dev moves story to 'review', then runs code-review (fresh context, different LLM recommended)
 
-generated: 2026-03-06T11:12:14-04:00
+generated: 2026-03-06T13:10:00-04:00
 project: LandingPage
 project_key: NOKEY
 tracking_system: file-system
 story_location: _bmad-output/implementation-artifacts
+
+notes:
+  - "Projeto entrou em fase de refatoracao para a linguagem V2 (Aptus High-Impact Minimalist)."
+  - "Novo ciclo de backlog inclui Epics 4, 5 e 6 para refactor de identidade, narrativa e conversao."
 
 development_status:
   # === Epic 1: Foundation & Visual Identity ===
@@ -67,3 +72,24 @@ development_status:
   3-4-success-state-post-submission-experience: done
   3-5-webhook-integration-crm-pipeline: done
   epic-3-retrospective: done
+
+  # === Epic 4: Identidade V2 ===
+  epic-4: in-progress
+  4-1-configuracao-de-tokens-v2-precision-black: todo
+  4-2-engineeringgrid-tailwind-css-puro: todo
+  4-3-componentizacao-v2-core: backlog
+  epic-4-retrospective: optional
+
+  # === Epic 5: Narrativa V2 ===
+  epic-5: backlog
+  5-1-rebuild-herosection-v2: backlog
+  5-2-rebuild-flowsection-v2: backlog
+  5-3-rebuild-technicalsection-v2: backlog
+  epic-5-retrospective: optional
+
+  # === Epic 6: Conversao V2 ===
+  epic-6: backlog
+  6-1-diagnosticmodalv2-astro-island: backlog
+  6-2-gatilhos-cinematograficos-cta-modal: backlog
+  6-3-conversao-consultiva-embed-success-v2: backlog
+  epic-6-retrospective: optional
