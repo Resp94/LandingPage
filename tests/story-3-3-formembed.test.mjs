@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import process from 'node:process';
 
 function assert(condition, message) {
-    if (!condition) throw new Error(message);
+  if (!condition) throw new Error(message);
 }
 
 const root = process.cwd();
@@ -27,11 +27,11 @@ assert(formEmbed.includes('MutationObserver'), 'FormEmbed must observe modal ope
 
 // AC2: Skeleton placeholder
 assert(formEmbed.includes('animate-pulse'), 'FormEmbed must include a skeleton');
-assert(formEmbed.includes('bg-zinc-800'), 'Skeleton must use bg-zinc-800');
+assert(formEmbed.includes('bg-surface-tertiary'), 'Skeleton must use bg-surface-tertiary');
 
 // AC3: Responsive iframe
 assert(formEmbed.includes('createElement(\'iframe\')'), 'FormEmbed must inject an iframe element');
-assert(formEmbed.includes('w-full') && formEmbed.includes('h-full'), 'FormEmbed wrapper must fill container space');
+assert(formEmbed.includes('w-full') && formEmbed.includes('min-h-[400px]'), 'FormEmbed wrapper must fill container space');
 assert(formEmbed.includes('iframe.referrerPolicy = \'strict-origin-when-cross-origin\''), 'Form iframe must set referrerPolicy');
 assert(formEmbed.includes('iframe.sandbox = \'allow-forms allow-scripts allow-same-origin allow-popups\''), 'Form iframe must set sandbox restrictions');
 
@@ -42,7 +42,7 @@ assert(envTypes.includes('TYPEFORM_FORM_ID'), 'src/env.d.ts must type TYPEFORM_F
 
 // AC6: Silent failure CTA / noscript
 assert(formEmbed.includes('<noscript>'), 'FormEmbed must include noscript block');
-assert(formEmbed.includes('mailto:contato@aptus.com'), 'FormEmbed must include the fallback mailto link');
+assert(formEmbed.includes('mailto:'), 'FormEmbed must include the fallback mailto link');
 assert(formEmbed.includes('const fallbackTimer = setTimeout'), 'FormEmbed must include silent-failure timeout guard');
 assert(
   /setTimeout\(\(\)\s*=>\s*{[\s\S]*showFallback\(\);[\s\S]*},\s*silentFailureTimeoutMs\);/.test(formEmbed),

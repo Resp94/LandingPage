@@ -45,8 +45,8 @@ assert(supabase.includes('if (!supabaseUrl || !supabaseAnonKey)'), 'Supabase hel
 
 // Fail-safe and schema compatibility
 assert(settings.includes('DEFAULT_SETTINGS'), 'Settings must define fallback defaults');
-assert(settings.includes("fetchSettingsRows('key, value')"), 'Settings must query key/value schema');
-assert(settings.includes("fetchSettingsRows('id, value')"), 'Settings must support id/value schema fallback');
+assert(settings.includes("fetchSettingsRows('key, value'"), 'Settings must query key/value schema');
+assert(settings.includes("fetchSettingsRows('id, value'"), 'Settings must support id/value schema fallback');
 assert(settings.includes('Supabase environment variables are missing. Using default settings.'), 'Settings must log env fail-safe path');
 assert(settings.includes('return setCache(DEFAULT_SETTINGS);'), 'Settings must fallback to default settings');
 assert(settings.includes('CACHE_TTL_MS'), 'Settings should cache responses to avoid repeated queries per request burst');
