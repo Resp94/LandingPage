@@ -6,7 +6,7 @@ const settings = await getGlobalSettings();
 const formId = import.meta.env.TYPEFORM_FORM_ID || '';
 ---
 
-<div class="form-embed-wrapper relative w-full h-[500px] sm:h-[600px] flex-1 rounded-xl border border-surface-tertiary/50 overflow-hidden bg-surface-secondary/30" data-form-id={formId}>
+<div class="form-embed-wrapper relative w-full min-h-[600px] flex-1 rounded-xl border border-surface-tertiary/50 bg-surface-secondary/30 transition-all duration-300" data-form-id={formId}>
   <!-- Skeleton Placeholder -->
   <div class="form-skeleton absolute inset-0 z-10 p-8 flex flex-col gap-4 bg-surface-secondary/50 backdrop-blur-sm transition-opacity duration-300">
     <div class="animate-pulse bg-surface-tertiary rounded w-1/3 h-6 mb-4"></div>
@@ -35,7 +35,7 @@ const formId = import.meta.env.TYPEFORM_FORM_ID || '';
   </div>
 
   <!-- Container for injected iframe -->
-  <div class="form-container relative z-0 w-full h-full opacity-0 transition-opacity duration-500">
+  <div class="form-container relative z-0 w-full opacity-0 transition-opacity duration-500">
   </div>
 </div>
 
@@ -75,12 +75,11 @@ const formId = import.meta.env.TYPEFORM_FORM_ID || '';
           // Using Tally embed script
           iframe.src = `https://tally.so/embed/${formId}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`;
           iframe.width = '100%';
-          iframe.height = '100%';
           iframe.title = 'Diagnostic Form';
           iframe.allow = 'fullscreen';
           iframe.referrerPolicy = 'strict-origin-when-cross-origin';
           iframe.sandbox = 'allow-forms allow-scripts allow-same-origin allow-popups';
-          iframe.className = 'w-full h-full min-h-[400px] border-none';
+          iframe.className = 'w-full min-h-[400px] border-none';
           
           let iframeLoaded = false;
           const fallbackTimer = setTimeout(() => {
