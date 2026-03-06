@@ -20,9 +20,9 @@ const {
   aria-describedby="diagnostic-modal-description"
   aria-modal="true"
   role="dialog"
-  class="backdrop:bg-surface-primary/80 backdrop:backdrop-blur-xl m-auto mx-auto p-0 max-w-xl w-[calc(100vw-2rem)] min-h-[400px] border border-surface-tertiary bg-surface-primary rounded-2xl shadow-2xl text-white/90 opacity-0 translate-y-2 open:opacity-100 open:translate-y-0 transition-all duration-300 ease-out motion-reduce:transition-none"
+  class="backdrop:bg-surface-primary/80 backdrop:backdrop-blur-xl m-auto mx-auto p-0 max-w-xl w-[calc(100vw-2rem)] min-h-[400px] max-h-[90vh] overflow-y-auto border border-surface-tertiary bg-surface-primary rounded-2xl shadow-2xl text-white/90 opacity-0 translate-y-2 open:opacity-100 open:translate-y-0 transition-all duration-300 ease-out motion-reduce:transition-none"
 >
-  <div class="relative w-full h-full p-6 sm:p-8 flex flex-col">
+  <div class="relative w-full p-6 sm:p-8 flex flex-col">
     <!-- Header -->
     <div class="mb-6 pr-8">
       <h2 id="diagnostic-modal-title" class="text-xl font-medium tracking-tight text-white/90 title-font">
@@ -59,9 +59,9 @@ const {
     </button>
 
     <!-- Content Area for form and success steps -->
-    <div class="flex-1 rounded-xl w-full h-full min-h-[500px] relative p-0 md:p-2 overflow-hidden flex items-stretch justify-center">
+    <div class="flex-1 rounded-xl w-full min-h-[500px] relative p-0 md:p-2 flex items-stretch justify-center">
       
-      <div id="form-view" class="absolute inset-0 transition-opacity duration-300 ease-out opacity-100 flex items-stretch justify-center w-full h-full z-10 bg-surface-primary">
+      <div id="form-view" class="relative transition-opacity duration-300 ease-out opacity-100 flex items-stretch justify-center w-full z-10 bg-surface-primary">
         <FormEmbed />
       </div>
 
