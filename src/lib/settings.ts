@@ -88,10 +88,9 @@ function setCache(settings: GlobalSettings): GlobalSettings {
 }
 
 async function fetchSettingsRows(
-  selectColumns: 'key, value' | 'id, value',
-  runtimeEnv?: Record<string, string>
+  selectColumns: 'key, value' | 'id, value'
 ): Promise<GlobalSettingRow[] | null> {
-  const supabase = getSupabaseClient(runtimeEnv);
+  const supabase = getSupabaseClient();
   if (!supabase) {
     return null;
   }
@@ -105,7 +104,7 @@ async function fetchSettingsRows(
   return data as GlobalSettingRow[];
 }
 
-export async function getGlobalSettings(runtimeEnv?: Record<string, string>): Promise<GlobalSettings> {
+export async function getGlobalSettings(): Promise<GlobalSettings> {
   if (CACHE_TTL_MS > 0 && cachedSettings && Date.now() < cacheExpiresAt) {
     return cachedSettings;
   }
@@ -116,17 +115,17 @@ export async function getGlobalSettings(runtimeEnv?: Record<string, string>): Pr
 
   inFlightSettingsPromise = (async () => {
     try {
-      if (!getSupabaseClient(runtimeEnv)) {
+      if (!getSupabaseClient()) {
         console.error('Supabase environment variables are missing. Using default settings.');
         return setCache(DEFAULT_SETTINGS);
       }
 
-      const keyRows = await fetchSettingsRows('key, value', runtimeEnv);
+      const keyRows = await fetchSettingsRows('key, value');
       if (keyRows) {
         return setCache(buildSettings(keyRows));
       }
 
-      const idRows = await fetchSettingsRows('id, value', runtimeEnv);
+      const idRows = await fetchSettingsRows('id, value');
       if (idRows) {
         return setCache(buildSettings(idRows));
       }

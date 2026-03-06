@@ -1,17 +1,18 @@
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import type { Database } from '../types/supabase';
+import { env as cloudflareEnv } from 'cloudflare:workers';
 
 let cachedClient: SupabaseClient<Database> | null | undefined;
 let cachedUrl: string | undefined;
 
-export function getSupabaseClient(runtimeEnv?: Record<string, string>): SupabaseClient<Database> | null {
+export function getSupabaseClient(): SupabaseClient<Database> | null {
   // Accept both Cloudflare runtime env, PUBLIC_* and server-side aliases.
   const supabaseUrl =
-    runtimeEnv?.PUBLIC_SUPABASE_URL ||
+    cloudflareEnv?.PUBLIC_SUPABASE_URL ||
     import.meta.env.PUBLIC_SUPABASE_URL ||
     import.meta.env.SUPABASE_URL;
   const supabaseAnonKey =
-    runtimeEnv?.PUBLIC_SUPABASE_ANON_KEY ||
+    cloudflareEnv?.PUBLIC_SUPABASE_ANON_KEY ||
     import.meta.env.PUBLIC_SUPABASE_ANON_KEY ||
     import.meta.env.SUPABASE_ANON_KEY;
 

@@ -1,8 +1,7 @@
 ---
 import { getGlobalSettings } from '../../lib/settings';
 
-const env = Astro.locals.env;
-const settings = await getGlobalSettings(env);
+const settings = await getGlobalSettings();
 const currentYear = new Date().getFullYear();
 ---
 <footer class="mt-auto border-t border-surface-tertiary/50 py-12 bg-surface-primary text-white/50">
