@@ -1,9 +1,5 @@
 ---
-// src/components/sections/CTASection.astro
 import TacticalCTA from '../ui/TacticalCTA.astro';
-
-// Componente CTASection (Zero-JS Default, Server Rendering Only)
-// Observação de scroll e scroll-reveal tratados de forma global pela aplicação
 ---
 
 <section
@@ -14,18 +10,17 @@ import TacticalCTA from '../ui/TacticalCTA.astro';
   <div class="scroll-reveal mx-auto w-full max-w-4xl px-4">
     <h2
       id="cta-title"
-      class="text-4xl font-extrabold tracking-tighter text-white md:text-5xl lg:text-6xl"
+      class="text-4xl font-bold tracking-tight text-[var(--color-text-primary)] md:text-5xl lg:text-6xl"
     >
-      Sua Operação Merece Engenharia, <span class="text-[var(--color-surface-tertiary)]">Não Remendos</span>
+      Sua Operacao Merece Engenharia, <span class="text-[var(--color-text-secondary)]">Nao Remendos</span>
     </h2>
 
     <div class="mt-12 flex w-full justify-center">
-      <!-- O botão usará os mesmos estilos premium já definidos no TacticalCTA -->
       <TacticalCTA class="w-full shadow-2xl shadow-[var(--color-accent)]/20 sm:w-auto" />
     </div>
 
-    <p class="mt-8 text-lg text-white/60">
-      Análise sem compromisso. Sua operação diagnosticada em até 24h úteis.
+    <p class="mt-8 text-lg text-[var(--color-text-secondary)]">
+      Analise sem compromisso. Sua operacao diagnosticada em ate 24h uteis.
     </p>
   </div>
 </section>

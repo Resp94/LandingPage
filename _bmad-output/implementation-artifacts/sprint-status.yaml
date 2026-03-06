@@ -1,4 +1,4 @@
-# generated: 2026-03-06T13:10:00-04:00
+﻿# generated: 2026-03-06T13:10:00-04:00
 # project: LandingPage
 # project_key: NOKEY
 # tracking_system: file-system
@@ -75,7 +75,7 @@ development_status:
 
   # === Epic 4: Identidade V2 ===
   epic-4: in-progress
-  4-1-configuracao-de-tokens-v2-precision-black: todo
+  4-1-configuracao-de-tokens-v2-precision-black: ready-for-dev
   4-2-engineeringgrid-tailwind-css-puro: todo
   4-3-componentizacao-v2-core: backlog
   epic-4-retrospective: optional
@@ -93,3 +93,4 @@ development_status:
   6-2-gatilhos-cinematograficos-cta-modal: backlog
   6-3-conversao-consultiva-embed-success-v2: backlog
   epic-6-retrospective: optional
+

@@ -25,9 +25,12 @@ assert(footer.includes('<footer'), 'Footer must use <footer> element');
 
 // Border and styling
 assert(footer.includes('border-t'), 'Footer must have a top border');
-assert(footer.includes('border-surface-tertiary/50'), 'Footer border must be subtle');
+assert(footer.includes('border-[var(--color-grid-subtle)]'), 'Footer border must be subtle');
 assert(footer.includes('bg-surface-primary'), 'Footer must have dark background');
-assert(footer.includes('text-white/50'), 'Footer text must be subdued');
+assert(
+  footer.includes('text-[var(--color-text-meta)]'),
+  'Footer text must use V2 meta token'
+);
 
 // Copyright text with dynamic year
 assert(footer.includes('currentYear'), 'Footer must use dynamic year');
@@ -66,10 +69,13 @@ assert(
 assert(footer.includes('aria-hidden="true"'), 'Social SVG icons must be aria-hidden');
 
 // Responsive layout
-assert(footer.includes('flex-col md:flex-row'), 'Footer layout must be responsive');
+assert(/flex[^"\n]*flex-col[^"\n]*md:flex-row/.test(footer), 'Footer layout must be responsive');
 
 // Hover states
-assert(footer.includes('hover:text-white/90'), 'Links must lighten on hover');
+assert(
+  footer.includes('hover:text-[var(--color-text-primary)]'),
+  'Links must lighten on hover with V2 primary token'
+);
 
 // No client-side scripts
 assert(!footer.includes('<script'), 'Footer must not contain inline scripts');

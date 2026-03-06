@@ -82,7 +82,7 @@ const schema = {
       <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={`{"token": "${import.meta.env.CF_WEB_ANALYTICS_TOKEN}"}`} />
     )}
   </head>
-  <body class="bg-surface-primary text-white/90 flex flex-col min-h-screen">
+  <body class="bg-surface-primary text-[var(--color-text-primary)] flex flex-col min-h-screen">
     <Header />
     <main class="flex-grow pt-24">
       <slot />

@@ -1,0 +1,19 @@
+
+ ⛅️ wrangler 4.50.0 (update available 4.71.0)
+─────────────────────────────────────────────
+Using vars defined in .env
+Your Worker has access to the following bindings:
+Binding                                                                        Resource                  Mode
+env.ASSETS                                                                     Assets                    local
+env.TYPEFORM_FORM_ID ("jaBdWE")                                                Environment Variable      local
+env.PUBLIC_SUPABASE_URL ("https://msyxoxabxfefojgitjda.supabase...")           Environment Variable      local
+env.PUBLIC_SUPABASE_ANON_KEY ("sb_publishable_PluuPVlDl6oiK9_huCKHQQ...")      Environment Variable      local
+env.PUBLIC_GA_ID ("(hidden)")                                                  Environment Variable      local
+env.CF_WEB_ANALYTICS_TOKEN ("(hidden)")                                        Environment Variable      local
+
+⎔ Starting local server...
+[wrangler:warn] The latest compatibility date supported by the installed Cloudflare Workers Runtime is "2025-11-18",
+but you've requested "2026-03-03". Falling back to "2025-11-18"...
+Features enabled by your requested compatibility date may not be available.
+Upgrade to `wrangler@4.71.0` to remove this warning.
+[wrangler:info] Ready on http://127.0.0.1:4321

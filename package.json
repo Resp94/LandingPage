@@ -21,6 +21,7 @@
     "test:story-3-3": "node tests/story-3-3-formembed.test.mjs",
     "test:story-3-4": "node tests/story-3-4-successstate.test.mjs",
     "test:story-3-5": "node tests/story-3-5-webhook-pipeline.test.mjs",
+    "test:story-4-1": "node tests/story-4-1-tokens-v2.test.mjs",
     "test:e2e-problem": "node tests/e2e-problem-section.test.mjs",
     "test:e2e-header": "node tests/e2e-header.test.mjs",
     "test:e2e-footer": "node tests/e2e-footer.test.mjs",
@@ -30,7 +31,7 @@
     "test:e2e-a11y-seo": "node tests/e2e-global-a11y-seo.test.mjs",
     "test:e2e-build": "node tests/e2e-build-output.test.mjs",
     "test:e2e": "npm run test:e2e-problem && npm run test:e2e-header && npm run test:e2e-footer && npm run test:e2e-scroll-reveal && npm run test:e2e-badge && npm run test:e2e-modal-script && npm run test:e2e-a11y-seo && npm run test:e2e-build",
-    "test": "npm run test:story-1-6 && npm run test:story-2-1 && npm run test:story-2-3 && npm run test:story-2-4 && npm run test:story-2-5 && npm run test:story-3-1 && npm run test:story-3-2 && npm run test:story-3-3 && npm run test:story-3-4 && npm run test:story-3-5 && npm run test:e2e"
+    "test": "npm run test:story-1-6 && npm run test:story-2-1 && npm run test:story-2-3 && npm run test:story-2-4 && npm run test:story-2-5 && npm run test:story-3-1 && npm run test:story-3-2 && npm run test:story-3-3 && npm run test:story-3-4 && npm run test:story-3-5 && npm run test:story-4-1 && npm run test:e2e"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",

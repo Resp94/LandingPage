@@ -16,36 +16,35 @@ assert(existsSync(modalScriptPath), 'Missing src/scripts/modal.ts');
 const modalComponent = readFileSync(modalComponentPath, 'utf8');
 const modalScript = readFileSync(modalScriptPath, 'utf8');
 
-// AC1: success state inside DiagnosticModal without redirect
 assert(modalComponent.includes('id="form-view"'), 'DiagnosticModal must include #form-view');
 assert(modalComponent.includes('id="success-view"'), 'DiagnosticModal must include #success-view');
 assert(modalScript.includes('showSuccessState()'), 'modal.ts must transition to success state');
 
-// AC2/AC3/AC4: rich success content and styling requirements
 assert(modalComponent.includes('Analisando seu ecossistema...'), 'Success title must match copy');
 assert(
-  modalComponent.includes('Seu perfil foi enviado ao n') &&
-    modalComponent.includes('Engenharia Aptus') &&
+  modalComponent.includes('Seu perfil foi enviado ao nucleo de Engenharia Aptus') &&
     modalComponent.includes('24h'),
   'Success supporting text must match copy intent'
 );
-assert(modalComponent.includes('text-white/90'), 'Primary success copy must use text-white/90');
-assert(modalComponent.includes('text-white/60'), 'Supporting success copy must use text-white/60');
+assert(
+  modalComponent.includes('text-[var(--color-text-primary)]'),
+  'Primary success copy must use V2 primary text token'
+);
+assert(
+  modalComponent.includes('text-[var(--color-text-secondary)]'),
+  'Supporting success copy must use V2 secondary text token'
+);
 assert(modalComponent.includes('text-accent'), 'Success view must include accent checkmark');
 
-// AC5: avoid generic celebratory messaging
 assert(!/confetti|fireworks?|obrigado/i.test(modalComponent), 'Success state must avoid generic celebratory messaging');
 
-// AC6: ghost-style close action
 assert(modalComponent.includes('id="success-close-btn"'), 'Success view must include close button');
 assert(modalComponent.includes('bg-transparent'), 'Success close button must be ghost-style (transparent background)');
 assert(modalComponent.includes('hover:bg-surface-secondary'), 'Success close button must use token-based hover background');
 
-// AC7: accessibility attributes
 assert(modalComponent.includes('role="status"'), 'Success wrapper must include role="status"');
 assert(modalComponent.includes('aria-live="polite"'), 'Success wrapper must include aria-live="polite"');
 
-// Security/reliability follow-ups from review
 assert(modalScript.includes('event.origin !== iframeOrigin'), 'postMessage handler must validate origin');
 assert(modalScript.includes('event.source !== iframe.contentWindow'), 'postMessage handler must validate source window');
 assert(

@@ -36,12 +36,12 @@ assert(badge.includes('select-none'), 'Prefix must be non-selectable');
 // Rendering: label conditional display
 assert(badge.includes('{label &&'), 'Badge must conditionally render label');
 assert(
-    badge.includes('text-[var(--color-surface-tertiary)]') && badge.includes('text-white/60'),
+    badge.includes('text-[var(--color-text-meta)]') && badge.includes('text-[var(--color-text-secondary)]'),
     'Label color must adapt to light and dark variants'
 );
 
 // Rendering: value display
-assert(badge.includes('font-semibold'), 'Value must be font-semibold');
+assert(badge.includes('font-medium'), 'Value must be font-medium');
 assert(badge.includes('{value}'), 'Badge must render value');
 
 // Structural: inline-flex layout

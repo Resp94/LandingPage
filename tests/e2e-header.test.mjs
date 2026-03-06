@@ -33,7 +33,10 @@ assert(header.includes('w-full'), 'Header must be full width');
 assert(header.includes('bg-surface-primary/80'), 'Header must have semi-transparent bg');
 assert(header.includes('backdrop-blur'), 'Header must include backdrop blur');
 assert(header.includes('border-b'), 'Header must have bottom border');
-assert(header.includes('border-surface-tertiary/50'), 'Header border must use subtle surface token');
+assert(
+  header.includes('border-[var(--color-grid-subtle)]'),
+  'Header border must use subtle grid token'
+);
 
 // Logo present and accessible
 assert(header.includes('<img'), 'Header must include logo image');
@@ -49,7 +52,7 @@ assert(header.includes('<TacticalCTA'), 'Header must render TacticalCTA');
 
 // Responsive layout (flex-col for mobile, flex-row for sm+)
 assert(
-    header.includes('flex-col sm:flex-row') || header.includes('flex flex-col sm:flex-row'),
+    /flex[^"\n]*flex-col[^"\n]*sm:flex-row/.test(header),
     'Header must use responsive flex layout'
 );
 

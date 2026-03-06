@@ -16,9 +16,9 @@ const hero = readFileSync(heroPath, 'utf8');
 // AC3: Headline quality and typography
 assert(hero.includes('Pare de Automatizar o Caos'), 'Hero headline copy must match approved text');
 assert(
-  hero.includes('text-white') &&
-    hero.includes('tracking-tighter') &&
-    hero.includes('font-extrabold') &&
+  hero.includes('text-[var(--color-text-primary)]') &&
+    hero.includes('tracking-tight') &&
+    hero.includes('font-bold') &&
     hero.includes('text-4xl') &&
     hero.includes('sm:text-5xl') &&
     hero.includes('md:text-6xl') &&
@@ -28,7 +28,10 @@ assert(
 
 // AC4: Subheadline (Engenharia Operacional), updated palette
 assert(hero.includes('Engenharia Operacional'), 'Hero subheadline must describe Engenharia Operacional');
-assert(hero.includes('text-white/60'), 'Hero subheadline must use text-white/60');
+assert(
+  hero.includes('text-[var(--color-text-secondary)]'),
+  'Hero subheadline must use the V2 secondary text token'
+);
 assert(hero.includes('leading-relaxed'), 'Hero subheadline must keep readable leading');
 
 // AC5: TacticalCTA prominent and with required copy
