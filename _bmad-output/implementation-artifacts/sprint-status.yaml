@@ -48,7 +48,7 @@ development_status:
   1-6-dynamic-global-settings-supabase-integration: done
   1-4-scrollreveal-component-animations: done
   1-5-ci-cd-pipeline-deployment: done
-  epic-1-retrospective: optional
+  epic-1-retrospective: done
 
   # === Epic 2: Narrative Content & Authority Positioning ===
   epic-2: done
@@ -57,7 +57,7 @@ development_status:
   2-3-solution-section-metodo-aptus: done
   2-4-cta-section-privacy-page: done
   2-5-index-page-assembly: done
-  epic-2-retrospective: optional
+  epic-2-retrospective: done
 
   # === Epic 3: Lead Qualification Engine & Conversion ===
   epic-3: done
@@ -66,5 +66,4 @@ development_status:
   3-3-typeform-tally-embed-form-integration: done
   3-4-success-state-post-submission-experience: done
   3-5-webhook-integration-crm-pipeline: done
-  epic-3-retrospective: optional
-
+  epic-3-retrospective: done
