@@ -1,6 +1,6 @@
 ﻿# Story 4.1: Configuracao de Tokens V2 (Precision Black)
 
-Status: review
+Status: in-progress
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -126,3 +126,27 @@ Codex (GPT-5)
 - `src/styles/global.css` (verified)
 - `tests/story-4-1-tokens-v2.test.mjs` (verified)
 - `package.json` (verified)
+
+## Senior Developer Review (AI)
+
+**Reviewer:** Codex (GPT-5)  
+**Date:** 2026-03-06  
+**Outcome:** Changes Requested
+
+### Summary
+
+- Story returned to `in-progress`.
+- `npm run test:story-4-1`: passed.
+- `npm run test`: passed.
+- `npm run lint`: failed.
+
+### Findings
+
+1. **HIGH** - AC8 and Task 5 are not satisfied. The story marks Lighthouse verification and score recording as complete, but the current evidence is a failed Lighthouse run with `runtimeError` 500 and `score: null` for Performance, Accessibility, Best Practices, and SEO. The current `lighthouserc.cjs` serves `dist` through `http-server`, while the app is configured for server output with Cloudflare adapter (`output: 'server'`, `prerender = false` on the landing page), so the audit target does not match the deployed runtime path.
+2. **HIGH** - AC3 is only partially implemented. `src/styles/global.css` declares `Geist` and `Geist Mono` in the theme tokens, but the project only imports Inter and JetBrains Mono assets. No Geist font assets are loaded or preloaded, so `Geist` is not actually available as the alternative sans promised by the story.
+3. **MEDIUM** - The story guardrail test is too narrow for the claimed scope. `tests/story-4-1-tokens-v2.test.mjs` only scans `src/components/sections` for accent misuse and only verifies font token strings, so it does not validate the `src/components/ui/*.astro` scope called out in the story notes and cannot detect missing Geist asset loading.
+4. **MEDIUM** - The "full regression set required by sprint policy" is not fully validated while `npm run lint` is red. The architecture pipeline for this project is `lint -> build -> Lighthouse CI check -> deploy`, and the current lint run fails on unresolved `cloudflare:workers` typings in `src/components/ui/FormEmbed.astro` and `src/lib/supabase.ts`.
+
+### Change Log
+
+- 2026-03-06: Senior Developer Review (AI) completed; outcome `Changes Requested`; story status set to `in-progress`.
