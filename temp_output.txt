@@ -304,92 +304,26 @@ C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/TacticalCTA.ast
     at Socket.readFromStdout (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:581:7)
 [31m[1m15:25:46[22m [ERROR] [vite][39m [31merror while updating dependencies:
 Error: EPERM: operation not permitted, rename 'C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\.vite\deps_temp_42804b80' -> 'C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\.vite\deps'[39m
-put.txt
-[2m14:02:32[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:32[22m [34m[200][39m / [2m188ms[22m
-[2m14:02:33[22m [34m[watch][39m temp_output.txt
-[2m14:02:33[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:33[22m [34m[200][39m / [2m198ms[22m
-[2m14:02:33[22m [34m[watch][39m temp_output.txt
-[2m14:02:33[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:33[22m [34m[200][39m / [2m190ms[22m
-[2m14:02:33[22m [34m[watch][39m temp_output.txt
-[2m14:02:33[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:34[22m [34m[200][39m / [2m191ms[22m
-[2m14:02:34[22m [34m[watch][39m temp_output.txt
-[2m14:02:34[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:34[22m [34m[200][39m / [2m208ms[22m
-[2m14:02:34[22m [34m[watch][39m temp_output.txt
-[2m14:02:34[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:34[22m [34m[200][39m / [2m218ms[22m
-[2m14:02:35[22m [34m[watch][39m temp_output.txt
-[2m14:02:35[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:35[22m [34m[200][39m / [2m205ms[22m
-[2m14:02:35[22m [34m[watch][39m temp_output.txt
-[2m14:02:35[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:35[22m [34m[200][39m / [2m225ms[22m
-[2m14:02:35[22m [34m[watch][39m temp_output.txt
-[2m14:02:35[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:36[22m [34m[200][39m / [2m209ms[22m
-[2m14:02:36[22m [34m[watch][39m temp_output.txt
-[2m14:02:36[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:36[22m [34m[200][39m / [2m317ms[22m
-[2m14:02:37[22m [34m[watch][39m temp_output.txt
-[2m14:02:37[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:02:37[22m [34m[200][39m / [2m425ms[22m
-[2m14:02:37[22m [34m[watch][39m temp_output.txt
-[2m14:02:37[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-Supabase environment variables are missing. Using default settings.
-[2m14:02:38[22m [34m[200][39m / [2m273ms[22m
-[2m14:02:38[22m [34m[200][39m / [2m273ms[22m
-[2m14:02:38[22m [34m[watch][39m temp_output.txt
-[2m14:02:38[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:05:43[22m [34m[200][39m / [2m495ms[22m
-[2m14:05:44[22m [34m[watch][39m temp_output.txt
-[2m14:05:44[22m [34m[watch][39m temp_output.txt
-[2m14:05:44[22m [34m[watch][39m temp_output.txt
-[2m14:05:44[22m [34m[watch][39m temp_output.txt
-Supabase environment variables are missing. Using default settings.
-[2m14:05:44[22m [34m[200][39m / [2m270ms[22m
-[2m14:05:45[22m [34m[watch][39m temp_output.txt
-[2m14:05:45[22m [34m[watch][39m temp_output.txt
-[2m14:14:45[22m [34m[watch][39m src/lib/supabase.ts
-[2m14:14:45[22m [34m[watch][39m src/lib/supabase.ts
-[2m14:15:08[22m [34m[watch][39m src/env.d.ts
-[2m14:15:08[22m [34m[watch][39m src/env.d.ts
-[2m14:16:03[22m [34m[watch][39m .env.example
-[2m14:16:03[22m [34m[watch][39m .env.example
-[2m14:16:03[22m [34m[watch][39m temp_output.txt
-[2m14:16:03[22m [34m[watch][39m temp_output.txt
-[2m14:24:33[22m [34m[vite][39m [32m.env changed, restarting server...[39m
-[2m14:24:33[22m Restarting...
-[2m14:24:34[22m [34m[watch][39m temp_output.txt
-[2m14:24:34[22m [34m[watch][39m temp_output.txt
-[2m14:24:34[22m [34m[@astrojs/cloudflare][39m Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
-[2m14:24:34[22m [34m[@astrojs/cloudflare][39m If you see the error "Invalid binding `SESSION`" in your build output, you need to add the binding to your wrangler config file.
-[33m[1m14:24:34[22m [WARN] [adapter][39m Cloudflare does not support sharp at runtime. However, you can configure `imageService: "compile"` to optimize images with sharp on prerendered pages during build time.
+[2m22:00:42[22m [34m[vite][39m [32m.env changed, restarting server...[39m
+[2m22:00:42[22m Restarting...
+[2m22:00:43[22m [34m[@astrojs/cloudflare][39m Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
+[2m22:00:43[22m [34m[@astrojs/cloudflare][39m If you see the error "Invalid binding `SESSION`" in your build output, you need to add the binding to your wrangler config file.
+[33m[1m22:00:44[22m [WARN] [adapter][39m Cloudflare does not support sharp at runtime. However, you can configure `imageService: "compile"` to optimize images with sharp on prerendered pages during build time.
 Using vars defined in .env
-[2m14:24:37[22m [34m[build][39m Waiting for integration [1m"@astrojs/cloudflare"[22m, hook [1m"astro:server:setup"[22m...
+[2m22:00:48[22m [34m[build][39m Waiting for integration [1m"@astrojs/cloudflare"[22m, hook [1m"astro:server:setup"[22m...
+[2m22:00:49[22m [34m[vite][39m [32m.env changed, restarting server...[39m
+[2m22:00:49[22m [34m[vite][39m [32m.env changed, restarting server...[39m
 Using vars defined in .env
-[2m14:24:42[22m [34m[content][39m Syncing content
-[2m14:24:42[22m [34m[content][39m Synced content
-[2m14:24:42[22m [34m[types][39m Generated [2m3.59s[22m
-[2m14:24:42[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
-[2m14:24:42[22m [34m[vite][39m Port 5435 is in use, trying another one...
-[31m[1m14:24:42[22m [ERROR] [vite][39m Error: [31m  Failed to scan for dependencies from entries:
+[2m22:00:52[22m [34m[build][39m Waiting for integration [1m"@astrojs/cloudflare"[22m, hook [1m"astro:server:setup"[22m...
+[2m22:00:55[22m [34m[vite][39m Port 5173 is in use, trying another one...
+[2m22:00:56[22m [34m[vite][39m Port 5174 is in use, trying another one...
+[2m22:00:56[22m [34m[vite][39m server restarted.
+[2m22:00:56[22m [34m[vite][39m 
+[2m22:00:56[22m [34m[vite][39m   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+[2m22:00:56[22m [34m[vite][39m 
+[2m22:00:56[22m [34m[vite][39m   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+Using vars defined in .env
+[31m[1m22:01:00[22m [ERROR] [vite][39m Error: [31m  Failed to scan for dependencies from entries:
   C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/layouts/BaseLayout.astro
 C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/pages/index.astro
 C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/pages/privacidade.astro
@@ -403,6 +337,52 @@ C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/sections/SolutionS
 C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/DataMatrixBadge.astro
 C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/DiagnosticModal.astro
 C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/FormEmbed.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/ScrollReveal.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/TacticalCTA.astro
+
+  [39m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUnterminated string literal[0m
+
+    script:C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/ScrollReveal.astro?id=0:31:38:
+[37m      31 │ import "../../scripts/scrollReveal.ts"[32m[37m
+         ╵                                       [32m^[0m
+
+
+    at failureErrorWithLog (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:924:7)
+    at C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:936:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:935:54)
+    at handleRequest (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:628:17)
+    at handleIncomingPacket (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:653:7)
+    at Socket.readFromStdout (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:581:7)
+[2m22:01:03[22m [34m[content][39m Syncing content
+[2m22:01:03[22m [34m[content][39m Synced content
+[2m22:01:03[22m [34m[types][39m Generated [2m8.83s[22m
+[31m[1m22:01:03[22m [ERROR][39m [31m[UnhandledRejection][39m Astro detected an unhandled rejection. Here's the stack trace:
+Error [ERR_SERVER_ALREADY_LISTEN]: Listen method has been called more than once without closing.
+    at Server.listen (node:net:2044:11)
+    at httpServer.listen (file:///C:/Users/respl/OneDrive/Aptus%20Flow/LandingPage/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:38758:14)
+  [1mHint:[22m
+[33m    Make sure your promises all have an `await` or a `.catch()` handler.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unhandled-rejection/[24m[39m
+  [1mStack trace:[22m
+[2m    at Server.listen (node:net:2044:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[31m[1m22:01:03[22m [ERROR][39m [31m[UnhandledRejection][39m Astro detected an unhandled rejection. Here's the stack trace:
+Error [ERR_SERVER_ALREADY_LISTEN]: Listen method has been called more than once without closing.
+    at Server.listen (node:net:2044:11)
+    at httpServer.listen (file:///C:/Users/respl/OneDrive/Aptus%20Flow/LandingPage/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:38758:14)
+  [1mHint:[22m
+[33m    Make sure your promises all have an `await` or a `.catch()` handler.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unhandled-rejection/[24m[39m
+  [1mStack trace:[22m
+[2m    at Server.listen (node:net:2044:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+age/src/components/ui/FormEmbed.astro
 C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/ScrollReveal.astro
 C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/TacticalCTA.astro
 
@@ -470,3 +450,80 @@ C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/TacticalCTA.ast
     at handleRequest (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:628:17)
     at handleIncomingPacket (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:653:7)
     at Socket.readFromStdout (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:581:7)
+[2m22:00:42[22m [34m[vite][39m [32m.env changed, restarting server...[39m
+[2m22:00:42[22m Restarting...
+[2m22:00:43[22m [34m[@astrojs/cloudflare][39m Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
+[2m22:00:43[22m [34m[@astrojs/cloudflare][39m If you see the error "Invalid binding `SESSION`" in your build output, you need to add the binding to your wrangler config file.
+[33m[1m22:00:43[22m [WARN] [adapter][39m Cloudflare does not support sharp at runtime. However, you can configure `imageService: "compile"` to optimize images with sharp on prerendered pages during build time.
+Using vars defined in .env
+[2m22:00:47[22m [34m[build][39m Waiting for integration [1m"@astrojs/cloudflare"[22m, hook [1m"astro:server:setup"[22m...
+[2m22:00:49[22m [34m[vite][39m [32m.env changed, restarting server...[39m
+Using vars defined in .env
+[2m22:00:53[22m [34m[build][39m Waiting for integration [1m"@astrojs/cloudflare"[22m, hook [1m"astro:server:setup"[22m...
+Using vars defined in .env
+[2m22:00:55[22m [34m[vite][39m Port 5173 is in use, trying another one...
+[2m22:00:55[22m [34m[vite][39m server restarted.
+[2m22:00:55[22m [34m[vite][39m 
+[2m22:00:55[22m [34m[vite][39m   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5174[22m/[39m
+[2m22:00:56[22m [34m[build][39m Waiting for integration [1m"@astrojs/cloudflare"[22m, hook [1m"astro:server:setup"[22m...
+[31m[1m22:00:58[22m [ERROR] [vite][39m Error: [31m  Failed to scan for dependencies from entries:
+  C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/layouts/BaseLayout.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/pages/index.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/pages/privacidade.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/layout/Footer.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/layout/Header.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/sections/CTASection.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/sections/FAQSection.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/sections/HeroSection.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/sections/ProblemSection.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/sections/SolutionSection.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/DataMatrixBadge.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/DiagnosticModal.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/FormEmbed.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/ScrollReveal.astro
+C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/TacticalCTA.astro
+
+  [39m[31mX [41;31m[[41;97mERROR[41;31m][0m [1mUnterminated string literal[0m
+
+    script:C:/Users/respl/OneDrive/Aptus Flow/LandingPage/src/components/ui/ScrollReveal.astro?id=0:31:38:
+[37m      31 │ import "../../scripts/scrollReveal.ts"[32m[37m
+         ╵                                       [32m^[0m
+
+
+    at failureErrorWithLog (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:924:7)
+    at C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:936:9
+    at new Promise (<anonymous>)
+    at requestCallbacks.on-end (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:935:54)
+    at handleRequest (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:628:17)
+    at handleIncomingPacket (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:653:7)
+    at Socket.readFromStdout (C:\Users\respl\OneDrive\Aptus Flow\LandingPage\node_modules\vite\node_modules\esbuild\lib\main.js:581:7)
+[2m22:01:02[22m [34m[content][39m Syncing content
+[2m22:01:02[22m [34m[content][39m Astro config changed
+[2m22:01:02[22m [34m[content][39m Clearing content store
+[2m22:01:02[22m [34m[content][39m Synced content
+[2m22:01:02[22m [34m[types][39m Generated [2m10.29s[22m
+[31m[1m22:01:02[22m [ERROR][39m [31m[UnhandledRejection][39m Astro detected an unhandled rejection. Here's the stack trace:
+Error [ERR_SERVER_ALREADY_LISTEN]: Listen method has been called more than once without closing.
+    at Server.listen (node:net:2044:11)
+    at httpServer.listen (file:///C:/Users/respl/OneDrive/Aptus%20Flow/LandingPage/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:38758:14)
+  [1mHint:[22m
+[33m    Make sure your promises all have an `await` or a `.catch()` handler.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unhandled-rejection/[24m[39m
+  [1mStack trace:[22m
+[2m    at Server.listen (node:net:2044:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[31m[1m22:01:02[22m [ERROR][39m [31m[UnhandledRejection][39m Astro detected an unhandled rejection. Here's the stack trace:
+Error [ERR_SERVER_ALREADY_LISTEN]: Listen method has been called more than once without closing.
+    at Server.listen (node:net:2044:11)
+    at httpServer.listen (file:///C:/Users/respl/OneDrive/Aptus%20Flow/LandingPage/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:38758:14)
+  [1mHint:[22m
+[33m    Make sure your promises all have an `await` or a `.catch()` handler.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unhandled-rejection/[24m[39m
+  [1mStack trace:[22m
+[2m    at Server.listen (node:net:2044:11)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
