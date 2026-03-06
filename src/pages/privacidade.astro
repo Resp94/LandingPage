@@ -5,8 +5,8 @@ import { getGlobalSettings } from '../lib/settings';
 
 export const prerender = false;
 
-const runtimeEnv = (Astro.locals as any).runtime?.env;
-const settings = await getGlobalSettings(runtimeEnv);
+const env = Astro.locals.env;
+const settings = await getGlobalSettings(env);
 ---
 
 <BaseLayout 

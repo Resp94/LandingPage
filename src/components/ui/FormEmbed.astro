@@ -2,9 +2,9 @@
 // src/components/ui/FormEmbed.astro
 import { getGlobalSettings } from '../../lib/settings';
 
-const runtimeEnv = (Astro.locals as any).runtime?.env;
-const settings = await getGlobalSettings(runtimeEnv);
-const formId = runtimeEnv?.TYPEFORM_FORM_ID || import.meta.env.TYPEFORM_FORM_ID || '';
+const env = Astro.locals.env;
+const settings = await getGlobalSettings(env);
+const formId = env?.TYPEFORM_FORM_ID || '';
 ---
 
 <div class="form-embed-wrapper relative w-full min-h-[600px] flex-1 rounded-xl border border-surface-tertiary/50 bg-surface-secondary/30 transition-all duration-300" data-form-id={formId}>

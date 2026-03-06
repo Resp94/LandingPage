@@ -1,8 +1,8 @@
 ---
 import { getGlobalSettings } from '../../lib/settings';
 
-const runtimeEnv = (Astro.locals as any).runtime?.env;
-const settings = await getGlobalSettings(runtimeEnv);
+const env = Astro.locals.env;
+const settings = await getGlobalSettings(env);
 const currentYear = new Date().getFullYear();
 ---
 <footer class="mt-auto border-t border-surface-tertiary/50 py-12 bg-surface-primary text-white/50">

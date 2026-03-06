@@ -13,3 +13,11 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+type Runtime = import('@astrojs/cloudflare').Runtime<ImportMetaEnv>;
+
+declare namespace App {
+  interface Locals extends Runtime {
+    env: ImportMetaEnv & Record<string, string>;
+  }
+}
