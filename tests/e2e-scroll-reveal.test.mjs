@@ -24,7 +24,10 @@ assert(baseLayout.includes("import ScrollReveal"), 'BaseLayout must import Scrol
 assert(baseLayout.includes('<ScrollReveal />'), 'BaseLayout must render ScrollReveal provider');
 
 // Component: Script tag references the script file
-assert(component.includes('src="../../scripts/scrollReveal.ts"'), 'ScrollReveal component must reference scrollReveal.ts');
+assert(
+    component.includes('import "../../scripts/scrollReveal.ts";'),
+    'ScrollReveal component must import scrollReveal.ts'
+);
 
 // Component: Props interface
 assert(component.includes('interface Props'), 'ScrollReveal must define Props interface');

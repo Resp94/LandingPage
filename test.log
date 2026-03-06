@@ -1,0 +1,25 @@
+
+> landing-page@0.0.1 test
+> npm run test:story-1-6 && npm run test:story-2-1 && npm run test:story-2-3 && npm run test:story-2-4 && npm run test:story-2-5 && npm run test:story-3-1 && npm run test:story-3-2 && npm run test:story-3-3 && npm run test:story-3-4 && npm run test:story-3-5 && npm run test:e2e
+
+
+> landing-page@0.0.1 test:story-1-6
+> node tests/story-1-6-global-settings.test.mjs
+
+Story 1.6 checks passed.
+
+> landing-page@0.0.1 test:story-2-1
+> node tests/story-2-1-hero.test.mjs
+
+file:///C:/Users/respl/OneDrive/Aptus%20Flow/LandingPage/tests/story-2-1-hero.test.mjs:6
+  if (!condition) throw new Error(message);
+                        ^
+
+Error: Hero headline must keep required typography classes
+    at assert (file:///C:/Users/respl/OneDrive/Aptus%20Flow/LandingPage/tests/story-2-1-hero.test.mjs:6:25)
+    at file:///C:/Users/respl/OneDrive/Aptus%20Flow/LandingPage/tests/story-2-1-hero.test.mjs:18:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:413:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.13.0

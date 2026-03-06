@@ -23,6 +23,7 @@ const solution = readFileSync(solutionPath, 'utf8');
 assert(badge.includes('interface Props'), 'DataMatrixBadge must define Props interface');
 assert(badge.includes('label?: string'), 'Props must include optional label');
 assert(badge.includes('value: string | number'), 'Props must include required value (string|number)');
+assert(badge.includes("variant?: 'dark' | 'light'"), 'Props must include dark/light variant support');
 
 // Rendering: monospace font
 assert(badge.includes('font-mono'), 'Badge must use monospace font');
@@ -34,7 +35,10 @@ assert(badge.includes('select-none'), 'Prefix must be non-selectable');
 
 // Rendering: label conditional display
 assert(badge.includes('{label &&'), 'Badge must conditionally render label');
-assert(badge.includes('text-zinc-400'), 'Label must use text-zinc-400');
+assert(
+    badge.includes('text-[var(--color-surface-tertiary)]') && badge.includes('text-white/60'),
+    'Label color must adapt to light and dark variants'
+);
 
 // Rendering: value display
 assert(badge.includes('font-semibold'), 'Value must be font-semibold');

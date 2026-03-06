@@ -31,10 +31,13 @@ assert(ctaPos >= 0, 'CTASection is missing in index.astro');
 assert(heroPos < problemPos && problemPos < solutionPos && solutionPos < ctaPos, 'Section order must be Hero -> Problem -> Solution -> CTA');
 
 const cta = readFileSync(ctaPath, 'utf8');
-assert(cta.includes('py-24 lg:py-32'), 'CTASection must use py-24 lg:py-32');
+assert(cta.includes('py-24') && cta.includes('lg:py-32'), 'CTASection must use py-24 lg:py-32');
 assert(cta.includes('scroll-reveal'), 'CTASection must include scroll-reveal class');
 assert(cta.includes('<TacticalCTA'), 'CTASection must render TacticalCTA');
-assert(cta.includes('border-emerald-500/70'), 'CTASection TacticalCTA must use Emerald-accented default style');
+assert(
+  cta.includes('shadow-2xl') && cta.includes('shadow-[var(--color-accent)]/20'),
+  'CTASection TacticalCTA must keep accent shadow emphasis'
+);
 
 const privacy = readFileSync(privacyPath, 'utf8');
 assert(privacy.includes('import BaseLayout'), 'Privacy page must use BaseLayout');

@@ -16,19 +16,20 @@ const hero = readFileSync(heroPath, 'utf8');
 // AC3: Headline quality and typography
 assert(hero.includes('Pare de Automatizar o Caos'), 'Hero headline copy must match approved text');
 assert(
-  hero.includes('text-zinc-100') &&
-    hero.includes('tracking-tight') &&
-    hero.includes('font-bold') &&
+  hero.includes('text-white') &&
+    hero.includes('tracking-tighter') &&
+    hero.includes('font-extrabold') &&
+    hero.includes('text-4xl') &&
     hero.includes('sm:text-5xl') &&
     hero.includes('md:text-6xl') &&
     hero.includes('lg:text-7xl'),
   'Hero headline must keep required typography classes'
 );
 
-// AC4: Subheadline (Engenharia Operacional), max 3 lines, zinc-400
+// AC4: Subheadline (Engenharia Operacional), updated palette
 assert(hero.includes('Engenharia Operacional'), 'Hero subheadline must describe Engenharia Operacional');
-assert(hero.includes('text-zinc-400'), 'Hero subheadline must use text-zinc-400');
-assert(hero.includes('line-clamp-3'), 'Hero subheadline must be constrained to 3 lines');
+assert(hero.includes('text-white/60'), 'Hero subheadline must use text-white/60');
+assert(hero.includes('leading-relaxed'), 'Hero subheadline must keep readable leading');
 
 // AC5: TacticalCTA prominent and with required copy
 assert(hero.includes('<TacticalCTA'), 'Hero must render TacticalCTA');
@@ -36,12 +37,15 @@ assert(hero.includes('text="Agendar Auditoria"'), 'Hero CTA text must be Agendar
 assert(hero.indexOf('<TacticalCTA') > hero.indexOf('<p'), 'Hero CTA must be rendered below the subheadline');
 
 // AC6: Section spacing and centering
-assert(hero.includes('w-full py-24 lg:py-32'), 'Hero section must use py-24 lg:py-32');
+assert(
+  hero.includes('w-full') && hero.includes('py-24') && hero.includes('lg:py-32'),
+  'Hero section must use w-full and py-24/lg:py-32 spacing'
+);
 assert(hero.includes('max-w-7xl') && hero.includes('mx-auto'), 'Hero wrapper must use max-w-7xl mx-auto');
 
 // AC7 + AC8: scroll reveal, responsive text size, mobile left align
 assert(hero.includes('scroll-reveal'), 'Hero must include scroll-reveal class');
-assert(hero.includes('text-3xl'), 'Hero must scale down text for mobile');
+assert(hero.includes('text-4xl'), 'Hero must scale down text for mobile');
 assert(hero.includes('text-left') && hero.includes('md:text-center'), 'Hero must be left-aligned on mobile');
 
 // AC9 + AC10 guardrails

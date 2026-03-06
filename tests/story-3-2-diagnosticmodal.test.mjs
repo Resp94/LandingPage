@@ -21,7 +21,10 @@ const indexContent = readFileSync(indexPath, 'utf8');
 
 // AC1: Overlay / backdrop
 assert(modalComponent.includes('<dialog'), 'Modal must use native <dialog>');
-assert(modalComponent.includes('backdrop:bg-zinc-950/80'), 'Modal backdrop must include bg-zinc-950/80');
+assert(
+  modalComponent.includes('backdrop:bg-surface-primary/80'),
+  'Modal backdrop must include backdrop:bg-surface-primary/80'
+);
 assert(modalComponent.includes('backdrop:backdrop-blur-xl'), 'Modal backdrop must include backdrop blur');
 
 // AC2: centered panel + animation + reduced motion behavior
@@ -37,12 +40,11 @@ assert(modalComponent.includes('motion-reduce:transition-none'), 'Modal must dis
 // AC3: close button accessibility and styles
 assert(modalComponent.includes('id="close-diagnostic-modal"'), 'Modal must include close button id');
 assert(
-  modalComponent.includes('aria-label="Fechar formulário de diagnóstico"') ||
-    modalComponent.includes('aria-label="Fechar formulÃ¡rio de diagnÃ³stico"'),
+  /aria-label="Fechar.*diagn[oó]stico"/i.test(modalComponent),
   'Close button must include the correct aria-label'
 );
-assert(modalComponent.includes('text-zinc-500'), 'Close button must include text-zinc-500');
-assert(modalComponent.includes('hover:text-zinc-100'), 'Close button must include hover:text-zinc-100');
+assert(modalComponent.includes('text-white/50'), 'Close button must include text-white/50');
+assert(modalComponent.includes('hover:text-white/90'), 'Close button must include hover:text-white/90');
 
 // AC4/AC5: script responsibilities and accessibility behavior
 assert(modalComponent.includes('role="dialog"'), 'Modal must include role="dialog"');

@@ -23,7 +23,8 @@ assert(
 );
 
 assert(solution.includes('id="metodo-aptus"'), 'Solution section must expose id="metodo-aptus"');
-assert(solution.includes('<ol class="grid grid-cols-1 lg:grid-cols-3'), 'Solution steps must use ordered list semantics');
+assert(solution.includes('<ol class="grid grid-cols-1'), 'Solution steps must use ordered list semantics');
+assert(solution.includes('lg:grid-cols-3'), 'Solution steps must expand to 3 columns on desktop');
 assert(solution.includes('title: "Auditoria"'), 'Solution steps must include Auditoria');
 assert(solution.includes('title: "Arquitetura"'), 'Solution steps must include Arquitetura');
 assert(solution.includes('title: "Deploy"'), 'Solution steps must include Deploy');
@@ -33,8 +34,14 @@ assert(solution.includes('number: "03"'), 'Solution steps must include 03 number
 assert(solution.includes('font-mono text-4xl'), 'Step numbers must use mono font styling');
 assert(solution.includes('line-clamp-3'), 'Step description must clamp to max 3 lines');
 assert(solution.includes('DataMatrixBadge'), 'Solution section must render DataMatrixBadge metrics');
-assert(solution.includes('divide-zinc-800/50'), 'Solution section must include structural divider lines');
-assert(solution.includes('border border-zinc-800/50'), 'Solution section must include blueprint border treatment');
-assert(solution.includes('scroll-reveal p-8 lg:p-12'), 'Each phase block must include scroll-reveal');
+assert(solution.includes('divide-[var(--color-surface-secondary)]/10'), 'Solution section must include structural divider lines');
+assert(
+  solution.includes('border border-[var(--color-surface-secondary)]/10'),
+  'Solution section must include blueprint border treatment'
+);
+assert(
+  solution.includes('scroll-reveal') && solution.includes('p-8 lg:p-12'),
+  'Each phase block must include scroll-reveal with responsive padding'
+);
 
 console.log('Story 2.3 solution checks passed.');

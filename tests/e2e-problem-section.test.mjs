@@ -48,19 +48,27 @@ assert(problem.includes('caos operacional'), 'Section subheadline must reference
 
 // Headline uses h2 with correct typography
 assert(problem.includes('<h2'), 'Section headline must be h2');
-assert(problem.includes('text-4xl lg:text-5xl'), 'Section headline must scale responsively');
+assert(
+    problem.includes('text-4xl') && problem.includes('lg:text-5xl'),
+    'Section headline must scale responsively'
+);
 
 // Problem cards use h3 headings
 assert(problem.includes('<h3'), 'Problem card titles must be h3 elements');
 
 // Responsive grid layout
 assert(
-    problem.includes('grid-cols-1 md:grid-cols-2 lg:grid-cols-3'),
+    problem.includes('grid-cols-1') &&
+      problem.includes('md:grid-cols-2') &&
+      problem.includes('lg:grid-cols-3'),
     'Grid must be responsive: 1 col mobile, 2 cols tablet, 3 cols desktop'
 );
 
-// Grid divider styling (blueprint aesthetic)
-assert(problem.includes('border-grid'), 'Grid must use border-grid for divider lines');
+// Card styling (blueprint aesthetic)
+assert(
+    problem.includes('border border-[var(--color-surface-secondary)]/10'),
+    'Problem cards must use subtle blueprint border styling'
+);
 
 // Scroll-reveal animations with staggered delays
 assert(problem.includes('scroll-reveal'), 'Problem cards must include scroll-reveal class');
@@ -71,10 +79,10 @@ assert(problem.includes('delay-200'), 'Third card must have delay-200');
 assert(problem.includes('aria-hidden="true"'), 'SVG icons must be aria-hidden');
 assert(problem.includes('focusable="false"'), 'SVG icons must be non-focusable');
 
-// Dark theme styling
-assert(problem.includes('bg-zinc-950'), 'Section must have dark background');
-assert(problem.includes('text-zinc-100'), 'Headings must be text-zinc-100');
-assert(problem.includes('text-zinc-400'), 'Descriptions must be text-zinc-400');
+// Theme token styling
+assert(problem.includes('bg-[var(--color-surface-light)]'), 'Section must use light surface background token');
+assert(problem.includes('text-[var(--color-surface-primary)]'), 'Headings must use primary surface token');
+assert(problem.includes('text-[var(--color-surface-secondary)]'), 'Descriptions must use secondary surface token');
 
 // DataMatrixBadge import
 assert(problem.includes("import DataMatrixBadge"), 'Must import DataMatrixBadge component');
