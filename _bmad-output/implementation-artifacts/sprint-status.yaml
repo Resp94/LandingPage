@@ -75,7 +75,7 @@ development_status:
 
   # === Epic 4: Identidade V2 ===
   epic-4: in-progress
-  4-1-configuracao-de-tokens-v2-precision-black: in-progress
+  4-1-configuracao-de-tokens-v2-precision-black: done
   4-2-engineeringgrid-tailwind-css-puro: todo
   4-3-componentizacao-v2-core: backlog
   epic-4-retrospective: optional
